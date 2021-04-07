@@ -1,0 +1,127 @@
+@import "../../../styles/helpers";
+
+.headerLink {
+  overflow-x: hidden;
+  margin-right: 16px;
+
+  a {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-decoration: none;
+    color: $text-color;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: $font-weight-semi-bold;
+  }
+
+  > a {
+    position: relative;
+    padding: $sidebar-item-padding;
+    white-space: nowrap;
+    border-radius: .25rem;
+
+    @media (max-width: breakpoint-max(sm)) {
+      padding: 13px 32px;
+    }
+  }
+
+  .icon {
+    margin-right: .5rem;
+    max-height: 16px;
+    max-width: 16px;
+    text-align: center;
+  }
+
+  .badge {
+    display: flex;
+    margin-left: auto;
+    padding: 7px;
+    width: 24px;
+    height: 24px;
+    font-size: $font-size-sm;
+    line-height: 8px;
+    font-weight: $font-weight-normal;
+  }
+
+  @media (max-width: breakpoint-max(sm)) {
+    margin-right: 0;
+  }
+}
+
+a.headerLinkActive {
+  background-color: $violet;
+  border-radius: .25rem;
+  font-weight: $font-weight-semi-bold;
+  font-size: 1rem;
+  color: $white;
+
+  &:hover {
+    color: $white;
+  }
+
+  //.sidebarIcon {
+  //  path {
+  //    fill: blue;
+  //    stroke: red;
+  //  }
+  //}
+  // ПОЧЕМУ НЕ ПОДХВАТЫВАЕТСЯ ЦВЕТ????????
+
+  svg {
+    path {
+      fill: $white;
+      stroke: white;
+    }
+  }
+}
+
+.collapsed .caret {
+  transform: rotate(+90deg);
+}
+
+.caret {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 8px;
+
+  @include transition(transform 0.3s ease-in-out);
+}
+
+.panel {
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  border-radius: 0;
+  color: white;
+
+  ul {
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      padding: $sidebar-sub-item-padding;
+      font-size: $font-size-base;
+      font-weight: $font-weight-normal;
+
+      &:hover {
+        color: $default;
+      }
+    }
+
+    a.headerLinkActive {
+      color: $white;
+    }
+
+    @media (max-width: breakpoint-max(sm)) {
+      padding-left: 16px;
+    }
+  }
+
+  i {
+    font-size: 8px;
+  }
+}

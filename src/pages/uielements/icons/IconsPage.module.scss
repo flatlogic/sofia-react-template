@@ -1,0 +1,47 @@
+@import "../../../styles/helpers";
+
+.iconList {
+  div {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    height: 24px;
+
+    span {
+      margin-left: 8px;
+      font-size: $font-size-sm;
+      font-weight: $font-weight-normal;
+      color: $base-dark-gray;
+    }
+  }
+}
+
+
+//iconsBar: {
+//  marginBottom: theme.spacing(4),
+//  borderBottom: "1px solid",
+//  borderBottomColor: theme.palette.text.hint + "80"
+//},
+//tab: {
+//  color: theme.palette.primary.light + "CC"
+//},
+//materailIcon: {
+//  display: "flex",
+//  paddingLeft: `${theme.spacing(4)}px !important`,
+//  paddingRight: `${theme.spacing(4)}px !important`,
+//  color: theme.palette.text.secondary,
+//  fontSize: 24,
+//  overflowX: "hidden"
+//},
+//materialIconText: {
+//  marginLeft: theme.spacing(2),
+//  fontSize: 14
+//},
+//iconsContainer: {
+//  boxShadow: theme.customShadows.widget,
+//  overflow: "hidden",
+//  paddingBottom: theme.spacing(2)
+//}

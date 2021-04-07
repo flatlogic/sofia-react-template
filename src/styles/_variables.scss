@@ -1,0 +1,118 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+
+//== Fonts
+$font-weight-boldest: 900 !default;
+$font-weight-bold: 700 !default;
+$font-weight-semi-bold: 600 !default;
+$font-weight-normal: 400 !default;
+$font-weight-thin: 300 !default;
+$font-weight-base: $font-weight-normal !default;
+
+
+//== Typography
+$font-family-base: 'Poppins', sans-serif;
+
+$font-size-initial: 16px;
+$font-size-base: 1rem !default;
+$font-size-lg: 1.25rem !default;
+$font-size-sm: 0.875rem !default;
+$font-size-mini: 0.75rem !default;
+
+
+//== Headlines
+$headline-large: 1.875rem !default;
+$headline-medium: 1.25rem !default;
+$headline-small: 1rem !default;
+$headline-font-weight: $font-weight-semi-bold !default;
+
+
+//== Color system
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6b859e !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$violet:            #4d53e0 !default;
+$violet-dark:       #2F33A7 !default;
+$green:             #43BC13 !default;
+$blue:              #00A5FF !default;
+$orange:            #FFA100 !default;
+$orange-dark:       #FF4B23 !default;
+$pink:              #FF5668 !default;
+$yellow:            #FFC405 !default;
+$cyan:              #41D5E2 !default;
+$default:           #16365f !default;
+$base-dark-gray:    #6b859e !default;
+$base-middle-gray:  #C7D0D9 !default;
+$base-light-gray:   #F7F8FB !default;
+
+$theme-colors: (
+  primary:          $violet,
+  secondary:        $base-middle-gray,
+  secondary-red:    $pink,
+  secondary-yellow: $yellow,
+  secondary-cyan:   $cyan,
+  success:          $green,
+  info:             $blue,
+  warning:          $orange,
+  danger:           $orange-dark,
+  primary-hover:    $violet-dark,  // дополнить значениями хуверов после того как Яна добавит их в библиотеку
+  dark:             $gray-700,
+  default:          $default,
+  dark-gray:        $base-dark-gray,
+  middle-gray:      $base-middle-gray,
+  light-gray:       $base-light-gray,
+        // experimental added white color to theme-colors
+  white:            $white,
+);
+
+$body-bg: $base-light-gray !default;
+$icon-color: $default !default;
+$text-color: $default !default;
+$text-muted: $base-dark-gray !default;
+$widget-shadow: 4px 4px 16px 0 rgba(77, 83, 224, 0.2);
+
+//== Components
+$layout-padding: 24px 24px 68px;
+$content-padding: 24px;
+$content-padding-sm: 10px;
+$main-margin: 24px;
+
+//== Buttons
+$button-padding: 8px 32px;
+$border-radius: 8px !default;
+
+//== Navbar
+$navbar-margin: 24px;
+$navbar-bg: $body-bg !default;
+$navbar-height: 45px !default;
+$navbar-padding: 24px 24px 8px;
+
+//== Sidebar
+$sidebar-width-open: 240px;
+$sidebar-width-closed: 50px;
+$sidebar-transition-time: 0.2s !default;
+
+$sidebar-item-padding: 13px 16px !default;
+$sidebar-sub-item-padding: 8px 40px;
+$sidebar-color: $white !default;
+
+//== Widgets
+$widget-padding-vertical: 24px !default;
+$widget-padding-horizontal: 32px !default;
+$widget-bg-color: $white;
+$widget-border-radius: 8px;
+// Fonts
+// Font, line-height, and color for body text, headings, and more.
+

@@ -1,0 +1,66 @@
+@import '../../styles/helpers';
+
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.errorContainer {
+  margin: 80px auto;
+  width: 426px;
+  text-align: center;
+}
+
+.errorCode {
+  font-size: 72px;
+  font-weight: $font-weight-bold;
+  line-height: 1;
+  color: $violet;
+}
+
+.errorInfo {
+  margin: 16px auto 32px;
+  font-size: 20px;
+  font-weight: $font-weight-semi-bold;
+  color: $base-dark-gray;
+}
+
+.errorHelp {
+  margin-bottom: 32px;
+  font-size: 1rem;
+  font-weight: $font-weight-semi-bold;
+  color: $base-middle-gray;
+}
+
+.errorBtn {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semi-bold;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 84px 0 60px;
+  background-color: $white;
+}
+
+.errorImage {
+  width: 674px;
+  height: 400px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: $layout-padding;
+  background-color: $white;
+  color: $base-dark-gray;
+  font-size: $font-size-sm;
+}
+
+.footerLabel {
+  margin-right: 4px;
+}

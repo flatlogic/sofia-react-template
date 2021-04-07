@@ -1,0 +1,49 @@
+@import "../../styles/helpers";
+
+.root {
+  height: 100%;
+  position: relative;
+  left: 0;
+  transition: left $sidebar-transition-time ease-in-out;
+}
+
+.wrap {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  margin-left: $sidebar-width-open;
+  flex-direction: column;
+  right: 0;
+  left: 0;
+  transition: left $sidebar-transition-time ease-in-out, margin-left $sidebar-transition-time ease-in-out;
+
+  @media print {
+    margin: 0;
+  }
+
+  @media (max-width: breakpoint-max(sm)) {
+    margin-left: 0;
+    left: 0;
+  }
+
+  :global(.sidebar-hide) & {
+    margin: 0;
+  }
+}
+
+.content {
+  position: relative;
+  flex-grow: 1;
+  padding: $layout-padding;
+  background-color: $body-bg;
+}
+
+//.content {
+//  position: relative;
+//  flex-grow: 1;
+//  padding: $content-padding $content-padding ($content-padding + 20px);
+//  // add new padding after testing
+//  background: $body-bg;
+//}
+//
+

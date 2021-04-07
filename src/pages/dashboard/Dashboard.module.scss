@@ -1,0 +1,108 @@
+@import "../../styles/helpers";
+
+.widgetBlock {
+  padding: 12px 0;
+  background-color: $base-light-gray;
+  border-radius: 8px;
+}
+
+.widgetBody {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.smallWidget {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+
+  .mutedPink {
+    background-color: #FF566830;
+  }
+
+  .mutedYellow {
+    background-color: #FFC40530;
+  }
+
+  .mutedTeal {
+    background-color: #41D5E230;
+  }
+
+  .mutedViolet {
+    background-color: #4D53E030;
+  }
+//  доделать для остальных цветов прогресс баров
+}
+
+.image {
+  margin-right: 16px;
+  width: 80px;
+  height: 80px;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.userParams {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 32px;
+}
+
+.goals {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 54px 0;
+}
+
+.goalsTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.goal {
+  display: flex;
+  flex-direction: column;
+}
+
+.activity {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.statsBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 48px;
+  padding: 24px 36px;
+  border-radius: 8px;
+
+  @media (max-width: breakpoint-max(sm)) {
+    padding: 20px 24px;
+  }
+
+  .pieImg {
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+  }
+}
+
+.responsiveWidget {
+  @media (max-width: breakpoint-max(lg)) {
+    padding: 24px 12px;
+  }
+}
+
+

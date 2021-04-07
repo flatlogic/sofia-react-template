@@ -1,0 +1,39 @@
+@import "../../styles/helpers";
+
+.tableTitle {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 24px;
+
+  .table thead th {
+    font-size: $font-size-base;
+    font-weight: $font-weight-normal;
+    color: $base-light-gray;
+  }
+
+  img {
+    margin-left: 16px;
+  }
+}
+
+.transactionTitleBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 24px 13px 16px;
+}
+
+.widgetContentBlock {
+  margin: 0 24px 24px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding: 13px 24px 13px 16px;
+  border-radius: 8px;
+  background-color: $base-light-gray;
+}
+

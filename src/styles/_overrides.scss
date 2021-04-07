@@ -1,0 +1,264 @@
+///////// Navbar //////////
+.navbar {
+  padding: $navbar-padding;
+  border: none;
+  background: $body-bg;
+
+  .nav-link {
+    padding: 0;
+  }
+
+  .input-group {
+    width: 245px;
+    height: 45px;
+
+    .form-control {
+      font-size: $font-size-sm;
+      font-weight: $font-weight-normal;
+      color: $base-middle-gray;
+    }
+  }
+}
+
+///////// Widget //////////
+.widget-p-none {
+  padding: 0;
+}
+
+.widget-p-sm {
+  padding: 16px;
+}
+
+.widget-p-md {
+  padding: 24px 24px;
+}
+
+.widget-p-lg {
+  padding: 24px 32px;
+}
+
+///////// Breadcrumbs //////////
+.breadcrumb {
+  margin: 8px 0 0;
+  padding: 0;
+  color: $text-color;
+  background-color: transparent;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-normal;
+
+  a {
+    color: $base-dark-gray;
+  }
+}
+
+///////// Grid //////////
+.pl-base {
+  padding-left: 12px;
+}
+.pr-base {
+  padding-right: 12px;
+}
+.gutter > [class*='col-'] {
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+///////// Buttons //////////
+.btn {
+  padding: $button-padding;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semi-bold;
+
+  .btn-success,
+  .btn-info,
+  .btn-warning,
+  .btn-danger {
+    color: $white;
+  }
+}
+
+///////// Progress Bar //////////
+.progress-xs {
+  height: 6px;
+}
+
+
+///////// Dropdowns //////////
+.dropdown-toggle {
+  padding: 6px 12px;
+  border: 1px solid $base-middle-gray;
+  border-radius: 4px;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-normal;
+  color: $base-dark-gray;
+  background-color: $white;
+
+  &:hover {
+    background-color: $base-light-gray;
+  }
+}
+
+.dropdown-menu {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-normal;
+}
+
+.navbar-dropdown-toggle {
+  color: $text-color;
+  border: none;
+}
+
+.navbar-dropdown {
+  margin-top: 12px;
+  padding: 24px 16px;
+  box-shadow: $widget-shadow;
+  border: none;
+
+  .dropdown-item {
+    overflow: auto;
+    padding: 13px 16px;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: $base-light-gray;
+    }
+
+    span {
+      margin-left: 8px;
+      font-size: $font-size-base;
+      font-weight: $font-weight-semi-bold;
+      color: $text-color;
+    }
+  }
+
+  .logout-btn {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin-top: 48px;
+    padding: 8px 16px;
+  }
+}
+
+///////// Headings //////////
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: $font-weight-semi-bold;
+}
+
+///////// Headilines //////////
+.headline-1 {
+  font-size: $headline-large;
+  font-weight: $font-weight-semi-bold;
+}
+
+.headline-2 {
+  font-size: $headline-medium;
+  font-weight: $font-weight-semi-bold;
+}
+
+.headline-3 {
+  font-size: $headline-small;
+  font-weight: $font-weight-semi-bold;
+}
+
+///////// Body fonts //////////
+.body-1 {
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+}
+
+.body-2 {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semi-bold;
+}
+
+.body-3 {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-normal;
+}
+
+.label {
+  font-size: $font-size-mini;
+  font-weight: $font-weight-normal;
+}
+
+.muted {
+  color: $base-dark-gray;
+}
+
+///////// Icons //////////
+
+.eva {
+  font-size: 24px;
+}
+
+.fa {
+  font-size: 24px;
+}
+
+///////// Tables //////////
+.widget-table-overflow {
+  margin: 0 0 24px;
+
+  th:first-child,
+  td:first-child {
+    padding-left: 48px;
+  }
+
+  th:last-child,
+  td:last-child {
+    padding-right: 48px;
+  }
+}
+
+.table-bordered th {
+  background-color: $gray-300;
+}
+
+table > thead > tr > th {
+  border-top: none !important;
+  border-bottom-width: 1px !important;
+  text-transform: uppercase;
+}
+
+.table-striped {
+  tbody {
+    tr:nth-of-type(odd) {
+      background-color: $base-light-gray;
+    }
+  }
+}
+
+///////// Other //////////
+
+.nav {
+  .dropdown-toggle {
+    background-color: transparent;
+  }
+}
+
+.dropdown-toggle::after {
+  font-family: Line Awesome Free, sans-serif;
+  content: "\F107";
+  border: none;
+  width: auto;
+  height: auto;
+  vertical-align: baseline;
+  font-size: 85%;
+  font-weight: 600;
+
+  @media (max-width: breakpoint-max(xs)) {
+    display: none;
+  }
+}
