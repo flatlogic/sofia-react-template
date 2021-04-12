@@ -15,7 +15,6 @@
     .form-control {
       font-size: $font-size-sm;
       font-weight: $font-weight-normal;
-      color: $base-middle-gray;
     }
   }
 }
@@ -52,15 +51,23 @@
 }
 
 ///////// Grid //////////
-.pl-base {
+.pl-grid-col {
   padding-left: 12px;
 }
-.pr-base {
+.pr-grid-col {
   padding-right: 12px;
 }
 .gutter > [class*='col-'] {
   padding-right: 12px;
   padding-left: 12px;
+}
+
+.pr-grid-row {
+  padding-right: 3px;
+}
+
+.pl-grid-row {
+  padding-left: 3px;
 }
 
 ///////// Buttons //////////

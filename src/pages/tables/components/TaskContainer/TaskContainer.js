@@ -1,47 +1,28 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Task from "../Task/Task.js";
-import mock from "../../mock.js";
+import React, { useState } from "react";
+import s from "./TaskContainer.module.scss";
+import cx from "classnames";
 
-export default class TaskContainer extends React.Component {
-  constructor(props) {
-    super(props);
-    // this.state = mock;
-  }
-
-  static propTypes = {
-    data: PropTypes.arrayOf(
-      PropTypes.shape({
-        description: PropTypes.string,
-        time: PropTypes.string,
-      }),
-    ).isRequired,
-  }
-
-  componentDidMount() {
-    const tasks = this.props.data;
-
-    tasks.map((task) => {
-      task.completed = false;
-      return task;
-    });
-
-    this.setState({ tasks });
-  }
-
-  toggleTaskState = (index) => {
-    const newTasks = [...this.state.tasks];
-    newTasks[index].completed = !this.state.tasks[index].completed;
-    this.setState({ tasks: newTasks });
-  }
-
-  render() {
-    const { tasks } = this.state;
-    return (
-      <div>
-        {tasks.map((task, index) =>
-          <Task key={task.id} index={index} toggle={this.toggleTaskState} {...task} />)}
-      </div>
-    );
-  }
+const TaskContainer = (props) => {
+  return (
+    <ul>
+      {props.tasks.map((task) => (
+        <li
+          onChange={() => props.toggleTask(task.id)}
+          className={cx(`${s.taskBlock}`, { [s.completed]: task.completed })}
+          key={task.id}
+        >
+          <div className={s.taskDescription}>
+            <div className="form-check abc-checkbox abc-checkbox-success mr-1">
+              <input className="form-check-input" id={`checkbox${task.id}`} type="checkbox" />
+              <label className="form-check-label" htmlFor={`checkbox${task.id}`} />
+            </div>
+            <div className="body-3">{task.description}</div>
+          </div>
+          <div className={s.time}>{task.time}</div>
+        </li>
+      ))}
+    </ul>
+  )
 }
+
+export default TaskContainer;

@@ -42,6 +42,10 @@ th {
   color: $base-dark-gray;
 }
 
+.table td {
+  vertical-align: middle;
+}
+
 ul ul,
 ol ul {
   list-style: none;

@@ -82,7 +82,7 @@ class Dashboard extends React.Component {
     return (
       <div>
         <Row>
-          <Col className="pr-base" xs={12} lg={8}>
+          <Col className="pr-grid-col" xs={12} lg={8}>
             <Row className="gutter mb-4">
               <Col className="mb-4 mb-md-0" xs={12} md={6}>
                 <Widget className="widget-p-md">
@@ -228,7 +228,7 @@ class Dashboard extends React.Component {
               </Col>
             </Row>
           </Col>
-          <Col className="mt-4 mt-lg-0 pl-base" xs={12} lg={4}>
+          <Col className="mt-4 mt-lg-0 pl-grid-col" xs={12} lg={4}>
             <Widget className="widget-p-lg">
               <div className="d-flex">
                 <img className={s.image} src={user} alt="..." />

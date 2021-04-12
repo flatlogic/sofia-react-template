@@ -2,7 +2,7 @@
 //
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
-
+$enable-shadows: false;
 
 //== Fonts
 $font-weight-boldest: 900 !default;
@@ -113,6 +113,11 @@ $widget-padding-vertical: 24px !default;
 $widget-padding-horizontal: 32px !default;
 $widget-bg-color: $white;
 $widget-border-radius: 8px;
+
+
+//== Forms
+$input-focus-box-shadow: none;
+
 // Fonts
 // Font, line-height, and color for body text, headings, and more.
 

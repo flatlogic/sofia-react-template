@@ -1,0 +1,41 @@
+@import "../../../../styles/helpers";
+
+.widgetContentBlock {
+  margin: 0 24px 24px;
+}
+
+.taskBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding: 24px 24px 24px 16px;
+  border-radius: 8px;
+  background-color: $base-light-gray;
+
+  //&.completed {
+  //  background-color: $violet;
+  //  opacity: 0.24;
+  //}
+}
+
+.taskDescription {
+  display: flex;
+  align-items: center;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-normal;
+}
+
+.time {
+  font-size: $font-size-mini;
+  font-weight: $font-weight-semi-bold;
+  color: $base-middle-gray;
+}
+
+.completed {
+  background-color: #4D53E020;
+  .time {
+    color: white;
+  }
+}
+
