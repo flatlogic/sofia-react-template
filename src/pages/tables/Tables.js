@@ -44,6 +44,10 @@ const Tables = function () {
       return task;
       })
     )
+
+    // let newTasks = tasks;
+    // newTasks[id].completed = !tasks[id].completed;
+    // setTasks( newTasks )
   }
 
   return (
@@ -55,20 +59,20 @@ const Tables = function () {
               <Widget>
                 <div className={s.tableTitle}>
                   <div className="headline-2">States Colors</div>
-                  <div>
+                  <div className="d-flex">
                     <img src={searchIcon} />
-                    <img src={cloudIcon} />
+                    <img className="d-none d-sm-block" src={cloudIcon} />
                     <img src={printerIcon} />
-                    <img src={optionsIcon} />
+                    <img className="d-none d-sm-block" src={optionsIcon} />
                     <img src={funnelIcon} />
                   </div>
                 </div>
                 <div className="widget-table-overflow">
-                  <Table className="table-striped table-borderless">
+                  <Table className="table-striped table-borderless" responsive>
                     <thead>
                     <tr>
                       <th>
-                        <div className="abc-checkbox">
+                        <div>
                           <Input
                             id="checkbox1" type="checkbox"
                           />
@@ -85,14 +89,14 @@ const Tables = function () {
                     {firstTable.map(item => (
                       <tr>
                         <td>
-                          <div className="abc-checkbox">
+                          <div>
                             <Input
                               id={item.id} type="checkbox"
                             />
                             <Label for={item.id} />
                           </div>
                         </td>
-                        <td><img src={item.img}/><span className="ml-3">{item.name}</span></td>
+                        <td className="d-flex align-items-center"><img src={item.img}/><span className="ml-3">{item.name}</span></td>
                         <td>{item.company}</td>
                         <td>{item.city}</td>
                         <td>{item.state}</td>
@@ -112,11 +116,11 @@ const Tables = function () {
                     <img src={moreIcon} />
                 </div>
                 <div className="widget-table-overflow">
-                  <Table className="table-striped table-borderless">
+                  <Table className="table-striped table-borderless" responsive>
                     <thead>
                     <tr>
                       <th>
-                        <div className="abc-checkbox">
+                        <div>
                           <Input
                             id="checkbox2" type="checkbox"
                           />
@@ -136,7 +140,7 @@ const Tables = function () {
                     {secondTable.map(item => (
                       <tr>
                         <td>
-                          <div className="abc-checkbox">
+                          <div>
                             <Input
                               id={item.id} type="checkbox"
                             />
@@ -184,16 +188,16 @@ const Tables = function () {
                   {transactionWidget.map(item => (
                     <div className={s.content}>
                       <div><img src={item.icon}/><span className="body-2 ml-3">{item.category}</span></div>
-                      <div className="body-3 muted">{item.date}</div>
+                      <div className="body-3 muted d-none d-md-block">{item.date}</div>
                       <div className="body-2">{item.price}</div>
-                      <div className="body-3 muted">{item.description}</div>
-                      <img src={moreIcon}/>
+                      <div className="body-3 muted d-none d-lg-block">{item.description}</div>
+                      <img className="d-none d-sm-block" src={moreIcon}/>
                     </div>
                   ))}
                 </div>
               </Widget>
             </Col>
-            <Col xs={8} xl={4} className="pl-grid-col mt-4 mt-xl-0">
+            <Col xs={12} xl={4} className="pl-grid-col mt-4 mt-xl-0">
               <Widget>
                 <div className={s.tableTitle}>
                   <div className="headline-2">Tasks</div>

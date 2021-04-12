@@ -12,7 +12,7 @@ const TaskContainer = (props) => {
           key={task.id}
         >
           <div className={s.taskDescription}>
-            <div className="form-check abc-checkbox abc-checkbox-success mr-1">
+            <div className="form-check mr-1">
               <input className="form-check-input" id={`checkbox${task.id}`} type="checkbox" />
               <label className="form-check-label" htmlFor={`checkbox${task.id}`} />
             </div>

@@ -227,7 +227,12 @@ h6,
   td:last-child {
     padding-right: 48px;
   }
+
+  .form-check-input {
+    position: relative;
+  }
 }
+
 
 .table-bordered th {
   background-color: $gray-300;

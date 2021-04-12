@@ -5,16 +5,12 @@
   justify-content: space-between;
   padding: 24px 24px;
 
-  .table thead th {
-    font-size: $font-size-base;
-    font-weight: $font-weight-normal;
-    color: $base-light-gray;
-  }
-
   img {
     margin-left: 16px;
   }
 }
+
+
 
 .transactionTitleBlock {
   display: flex;
