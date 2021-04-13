@@ -1,11 +1,13 @@
-import ellieSmithImg from "../../assets/tables/ellieSmith.svg";
-import floydMilesImg from "../../assets/tables/floydMiles.svg";
-import janeCooperImg from "../../assets/tables/janeCooper.svg";
-import rosaFloresImg from "../../assets/tables/rosaFlores.svg";
+import ellieSmithImg from "../../assets/tables/ellieSmithImg.png";
+import floydMilesImg from "../../assets/tables/floydMilesImg.png";
+import rosaFloresImg from "../../assets/tables/rosaFloresImg.png";
+import janeCooperImg from "../../assets/tables/janeCooper.png";
 import bagIcon from "../../assets/tables/bagIcon.svg";
 import folderIcon from "../../assets/tables/folderIcon.svg";
 import joystickIcon from "../../assets/tables/joystickIcon.svg";
 import basketIcon from "../../assets/tables/basketIcon.svg";
+
+
 
 export default {
   firstTable: [

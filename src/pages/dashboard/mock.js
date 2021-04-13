@@ -1,4 +1,11 @@
 export default {
+  // activityWidget: [
+  //   {
+  //     id: 0,
+  //     goal: 1,
+  //     activity: 2,
+  //   },
+  // ],
   heartWidget: [
     {
       id: 0,

@@ -15,6 +15,7 @@ import {
   DropdownItem,
 } from "reactstrap";
 import Widget from "../../components/Widget/Widget.js";
+import ApexActivityChart from "./components/ActivityChart.js";
 
 import meal1 from "../../assets/dashboard/meal-1.svg";
 import meal2 from "../../assets/dashboard/meal-2.svg";
@@ -85,8 +86,8 @@ class Dashboard extends React.Component {
           <Col className="pr-grid-col" xs={12} lg={8}>
             <Row className="gutter mb-4">
               <Col className="mb-4 mb-md-0" xs={12} md={6}>
-                <Widget className="widget-p-md">
-                  <div className="d-flex justify-content-between">
+                <Widget className="">
+                  <div className="d-flex justify-content-between widget-p-md">
                     <div className="headline-3 d-flex align-items-center">Your activity</div>
                     <ButtonDropdown
                       isOpen={this.state.dropdownOpenOne} toggle={this.toggleOne}
@@ -102,6 +103,7 @@ class Dashboard extends React.Component {
                       </DropdownMenu>
                     </ButtonDropdown>
                   </div>
+                  <ApexActivityChart className="pb-4"/>
                 </Widget>
               </Col>
               <Col xs={12} md={6}>

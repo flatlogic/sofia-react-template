@@ -96,7 +96,7 @@ const Tables = function () {
                             <Label for={item.id} />
                           </div>
                         </td>
-                        <td className="d-flex align-items-center"><img src={item.img}/><span className="ml-3">{item.name}</span></td>
+                        <td className="d-flex align-items-center"><img className={s.image} src={item.img}/><span className="ml-3">{item.name}</span></td>
                         <td>{item.company}</td>
                         <td>{item.city}</td>
                         <td>{item.state}</td>
