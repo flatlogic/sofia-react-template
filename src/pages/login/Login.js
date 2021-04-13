@@ -76,7 +76,7 @@ class Login extends React.Component {
       <div className="auth-page">
         <Container className="col-12">
           <Row className="d-flex align-items-center">
-            <Col xs="6" className="left-column">
+            <Col xs={12} lg={6} className="left-column">
               <Widget className="widget-auth widget-p-lg">
                 <div className="d-flex align-items-center justify-content-between py-3">
                   <p className="auth-header mb-0">Login</p>
@@ -118,7 +118,7 @@ class Login extends React.Component {
                 </form>
               </Widget>
             </Col>
-            <Col xs="6" className="right-column">
+            <Col xs={0} lg={6} className="right-column">
               <div>
                 <img src={loginImage} alt="Error page image" />
               </div>

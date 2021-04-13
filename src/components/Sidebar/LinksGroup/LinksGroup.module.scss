@@ -42,6 +42,7 @@
     font-size: $font-size-sm;
     line-height: 8px;
     font-weight: $font-weight-normal;
+    border-radius: 50%;
   }
 
   @media (max-width: breakpoint-max(sm)) {

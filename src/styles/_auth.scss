@@ -14,12 +14,20 @@
     justify-content: center;
     height: 100vh;
     background-color: $white;
+
+    @media (max-width: breakpoint-max(md)) {
+      display: none;
+    }
   }
 }
 
 .widget-auth {
   width: 448px;
   box-shadow: 4px 4px 16px 0 rgba(77, 83, 224, 0.2);
+
+  @media (max-width: breakpoint-max(xs)) {
+    width: 100vw;
+  }
 
   .auth-header {
     font-size: $headline-large;

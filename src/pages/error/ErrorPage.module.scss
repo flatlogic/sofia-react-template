@@ -44,11 +44,21 @@
   width: 100%;
   padding: 84px 0 60px;
   background-color: $white;
+
+  @media (max-width: breakpoint-max(md)) {
+    padding: 40px 0;
+  }
 }
 
 .errorImage {
   width: 674px;
   height: 400px;
+
+  @media (max-width: breakpoint-max(md)) {
+    //margin: 0 40px 40px 40px;
+    width: 296px;
+    height: 176px;
+  }
 }
 
 .footer {

@@ -268,14 +268,14 @@ class IconsPage extends React.Component {
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-bed" /><span>Bed</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-bank" /><span>Bank</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-behance" /><span>Behance</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-behance-square" /><span>Behance-square</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-ban" /><span>Ban</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-bomb" /><span>Bomb</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-building" /><span>Building</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-cab" /><span>Cab</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-child" /><span>Car</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-bed" /><span>Child</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-circle-o-notch" /><span>Circle-o-notch</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-circle-thin" /><span>Circle-thin</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-bath" /><span>Bath</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-circle" /><span>Circle</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-codepen" /><span>Codepen</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-cube" /><span>Cubes</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-database" /><span>Database</span></Col>
@@ -283,67 +283,67 @@ class IconsPage extends React.Component {
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-deviantart" /><span>Deviantart</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-digg" /><span>Digg</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-empire" /><span>Empire</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-envelope-square" /><span>Envelope-square</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-envelope" /><span>Envelope</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-fax" /><span>Fax</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-file-archive-o" /><span>File-archive-o</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-file-audio-o" /><span>File-audio-o</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-file-code-o" /><span>File-code-o</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-file-excel-o" /><span>File-excel-o</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-file-image-o" /><span>File-image-o</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-file-movie-o" /><span>File-movie-o</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-file-pdf-o" /><span>File-pdf-o</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-file-photo-o" /><span>File-photo-o</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-file-picture-o" /><span>File-picture-o</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-file-powerpoint-o" /><span>File-powerpoint-o</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-file-sound-o" /><span>File-sound-o</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-file-video-o" /><span>File-video-o</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-file-word-o" /><span>File-word-o</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-file-zip-o" /><span>File-zip-o</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-git-square" /><span>Git-square</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-google" /><span>Google</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-graduation-cap" /><span>Graduation-cap</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-hacker-news" /><span>Hacker-news</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-file" /><span>File</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-amazon" /><span>Amazon</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-android" /><span>Android</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-apple" /><span>Apple</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-beer" /><span>Beer</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-bolt" /><span>Bolt</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-child" /><span>Child</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-chrome" /><span>Chrome</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-contao" /><span>Contao</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-yahoo" /><span>Yahoo</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-diamond" /><span>Diamond</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-cloud" /><span>Cloud</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-code" /><span>Code</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-codepen" /><span>Codepen</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-git" /><span>Git</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-github" /><span>Github</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-gitlab" /><span>Gitlab</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-gittip" /><span>Gittip</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-header" /><span>Header</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-history" /><span>History</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-institution" /><span>Institution</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-joomla" /><span>Joomla</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-jsfiddle" /><span>Jsfiddle</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-language" /><span>Language</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-life-bouy" /><span>Life-bouy</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-life-ring" /><span>Life-ring</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-life-saver" /><span>Life-saver</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-mortar-board" /><span>Mortar-board</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-drupal" /><span>Drupal</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-dropbox" /><span>Dropbox</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-etsy" /><span>Etsy</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-empire" /><span>Empire</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-openid" /><span>Openid</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-paper-plane" /><span>Paper-plane</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-paper-plane-o" /><span>paper-plane-o</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-envira" /><span>Envira</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-eraser" /><span>eraser</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-paragraph" /><span>Paragraph</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-paw" /><span>Paw</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-pied-piper" /><span>Pied-piper</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-pied-piper-alt" /><span>Pied-piper-alt</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-pied-piper-square" /><span>Pied-piper-square</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-euro" /><span>Euro</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-female" /><span>Female</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-film" /><span>Film</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-qq" /><span>Qq</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-ra" /><span>Ra</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-renren" /><span>Renren</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-rebel" /><span>Rebel</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-recycle" /><span>Recycle</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-reddit" /><span>Reddit</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-reddit-square" /><span>Reddit-square</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-firefox" /><span>Firefox</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-send" /><span>Send</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-send-o" /><span>Send-o</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-share-alt" /><span>Share-alt</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-share-alt-square" /><span>Share-alt-square</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-flask" /><span>Flask</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-flickr" /><span>Flickr</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-imdb" /><span>Imdb</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-slack" /><span>Slack</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-sliders" /><span>Sliders</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-soundcloud" /><span>Soundcloud</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-space-shuttle" /><span>Space-shuttle</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-safari" /><span>Safari</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-spoon" /><span>Spoon</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-spotify" /><span>Spotify</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-steam" /><span>Steam</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-steam-square" /><span>Steam-square</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-stumbleupon" /><span>Stumbleupon</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-stumbleupon-circle" /><span>Stumbleupon-circle</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-sheqel" /><span>Sheqel</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-terminal" /><span>Terminal</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-snapchat" /><span>Snapchat</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-support" /><span>Support</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-taxi" /><span>Taxi</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-tencent-weibo" /><span>Tencent-weibo</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><i className="fa la-patreon" /><span>Patreon</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-tree" /><span>Tree</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-university" /><span>University</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><i className="fa fa-vine" /><span>Wine</span></Col>

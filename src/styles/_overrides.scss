@@ -252,6 +252,54 @@ table > thead > tr > th {
   }
 }
 
+///////// Badges //////////
+.badge {
+  padding: 4px 8px;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semi-bold;
+  color: $white;
+  border-radius: 4px;
+}
+
+///////// Tabs //////////
+
+.nav-tabs {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+
+  .nav-link {
+    margin-bottom: -$nav-tabs-border-width;
+    border: $nav-tabs-border-width solid transparent;
+    color: $base-dark-gray;
+    @include border-top-radius($nav-tabs-border-radius);
+
+    @include hover-focus() {
+      border-color: $nav-tabs-link-hover-border-color;
+    }
+
+    &.disabled {
+      color: $base-dark-gray;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    color: $violet;
+    background-color: $white;
+    border-color: transparent;
+    border-bottom: 2px solid $violet;
+  }
+
+  .nav-link:hover {
+    color: $violet;
+    border-color: transparent;
+    border-bottom: 2px solid $violet;
+  }
+}
+
+
 ///////// Other //////////
 
 .nav {
