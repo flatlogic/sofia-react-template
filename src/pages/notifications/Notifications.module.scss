@@ -2,8 +2,46 @@
 
 .widgetText {
   margin-top: 10px;
-  margin-bottom: 8px;
   font-size: $font-size-sm;
   font-weight: $font-size-base;
   color: $base-dark-gray;
+}
+
+.layoutContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  width: 100%;
+  height: 130px;
+  border: 1px dashed $violet;
+}
+
+.layoutButtonsRow {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.layoutButton {
+  width: 82px;
+  height: 36px;
+  background-color: #C7D0D934;
+  outline: none;
+  border: none;
+}
+
+.layoutButtonActive {
+  background-color: $yellow;
+}
+
+.layoutText {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-base;
+  color: $violet
+}
+
+progress {
+  visibility: hidden;
 }

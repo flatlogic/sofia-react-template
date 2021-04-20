@@ -4,6 +4,7 @@ import {
   Row,
   Table,
   ButtonDropdown,
+  Dropdown,
   DropdownMenu,
   DropdownToggle,
   DropdownItem,
@@ -23,16 +24,28 @@ import printerIcon from "../../assets/tables/printerIcon.svg";
 import searchIcon from "../../assets/tables/searchIcon.svg";
 import moreIcon from "../../assets/tables/moreIcon.svg";
 
+
 const Tables = function () {
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [firstTable] = useState(mock.firstTable);
   const [secondTable] = useState(mock.secondTable);
-  const [transactionWidget] = useState(mock.transactionWidget);
+  const [transactions, setTransactions] = useState(mock.transactionsWidget);
   const [tasks, setTasks] = useState(mock.tasksWidget);
 
   const toggle = () => {
     setDropdownOpen(!dropdownOpen);
+  }
+
+  const transactionMenuOpen = (id) => {
+    setTransactions(
+      transactions.map( transaction => {
+        if (transaction.id === id) {
+          transaction.dropdownOpen = !transaction.dropdownOpen;
+        }
+        return transaction;
+      })
+    )
   }
 
   const toggleTask = (id) => {
@@ -44,10 +57,6 @@ const Tables = function () {
       return task;
       })
     )
-
-    // let newTasks = tasks;
-    // newTasks[id].completed = !tasks[id].completed;
-    // setTasks( newTasks )
   }
 
   return (
@@ -60,11 +69,11 @@ const Tables = function () {
                 <div className={s.tableTitle}>
                   <div className="headline-2">States Colors</div>
                   <div className="d-flex">
-                    <img src={searchIcon} />
-                    <img className="d-none d-sm-block" src={cloudIcon} />
-                    <img src={printerIcon} />
-                    <img className="d-none d-sm-block" src={optionsIcon} />
-                    <img src={funnelIcon} />
+                    <a><img src={searchIcon} /></a>
+                    <a><img className="d-none d-sm-block" src={cloudIcon} /></a>
+                    <a><img src={printerIcon} /></a>
+                    <a><img className="d-none d-sm-block" src={optionsIcon} /></a>
+                    <a><img src={funnelIcon} /></a>
                   </div>
                 </div>
                 <div className="widget-table-overflow">
@@ -169,7 +178,8 @@ const Tables = function () {
                   <div className="headline-2">Recent transaction</div>
                   <div>
                     <ButtonDropdown
-                      isOpen={dropdownOpen} toggle={toggle}
+                      isOpen={dropdownOpen}
+                      toggle={toggle}
                       className=""
                     >
                       <DropdownToggle caret>
@@ -185,13 +195,37 @@ const Tables = function () {
                   </div>
                 </div>
                 <div className={s.widgetContentBlock}>
-                  {transactionWidget.map(item => (
+                  {transactions.map(item => (
                     <div className={s.content}>
                       <div><img src={item.icon}/><span className="body-2 ml-3">{item.category}</span></div>
                       <div className="body-3 muted d-none d-md-block">{item.date}</div>
                       <div className="body-2">{item.price}</div>
                       <div className="body-3 muted d-none d-lg-block">{item.description}</div>
-                      <img className="d-none d-sm-block" src={moreIcon}/>
+
+                      <Dropdown
+                        className="d-none d-sm-block"
+                        nav
+                        isOpen={item.dropdownOpen}
+                        toggle={() => transactionMenuOpen(item.id)}
+                      >
+                        <DropdownToggle nav>
+                          <img className="d-none d-sm-block" src={moreIcon}/>
+                        </DropdownToggle>
+                        <DropdownMenu >
+                          <DropdownItem>
+                            <div>Copy</div>
+                          </DropdownItem>
+                          <DropdownItem>
+                            <div>Edit</div>
+                          </DropdownItem>
+                          <DropdownItem>
+                            <div>Delete</div>
+                          </DropdownItem>
+                        </DropdownMenu>
+                      </Dropdown>
+
+                      {/*/// ВЫНЕСТИ ОТДЕЛЬНЫМ КОМПОНЕНТОМ И СДЕЛАТЬ КАК ТАСК КОНТЕЙНЕР !!!*/}
+
                     </div>
                   ))}
                 </div>

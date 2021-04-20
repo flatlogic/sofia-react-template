@@ -299,6 +299,67 @@ table > thead > tr > th {
   }
 }
 
+////////// Alerts /////////
+.alert {
+  border: none;
+  padding: 12px 36px 12px 16px;
+  color: $white;
+
+  .btn {
+    border: none;
+  }
+
+  button.close {
+    font-weight: $font-weight-thin;
+    font-size: 20px;
+    text-shadow: none;
+    opacity: 1;
+    color: #fff;
+    outline: none;
+    padding: 0;
+    position: absolute;
+    top: auto;
+    right: 16px;
+    margin-left: 8px;
+
+    &.alert-transparent {
+      color: inherit;
+      opacity: 1;
+    }
+  }
+}
+
+///////// Notification button //////////
+.notification-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  color: $white;
+}
+
+///////// Toasts //////////
+
+.Toastify__toast-container {
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+  width: auto;
+}
+.Toastify__toast {
+  background-color: transparent;
+  box-shadow: none;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.Toastify__toast-body {
+  padding: 0;
+  width: 460px;
+}
 
 ///////// Other //////////
 

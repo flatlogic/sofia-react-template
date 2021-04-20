@@ -13,7 +13,7 @@ const TaskContainer = (props) => {
         >
           <div className={s.taskDescription}>
             <div className="form-check mr-1">
-              <input className="form-check-input" id={`checkbox${task.id}`} type="checkbox" />
+              <input checked={task.completed} className="form-check-input" id={`checkbox${task.id}`} type="checkbox" />
               <label className="form-check-label" htmlFor={`checkbox${task.id}`} />
             </div>
             <div className="body-3">{task.description}</div>

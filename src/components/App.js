@@ -9,6 +9,7 @@ import Register from "../pages/register/Register.js";
 import { logoutUser } from "../actions/auth.js";
 
 import "../styles/app.scss";
+import {ToastContainer} from "react-toastify";
 
 const PrivateRoute = ({ dispatch, component, ...rest }) => {
   if (!Login.isAuthenticated(JSON.parse(localStorage.getItem("authenticated")))) {
@@ -25,6 +26,7 @@ class App extends React.PureComponent {
   render() {
     return (
       <div>
+        <ToastContainer/>
         <HashRouter>
           <Switch>
             <Route path="/" exact render={() => <Redirect to="/app/dashboard" />} />

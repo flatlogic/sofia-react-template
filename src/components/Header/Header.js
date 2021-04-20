@@ -40,7 +40,6 @@ import calendarIcon from "../../assets/navbarMenus/calendarIcon.svg";
 import envelopeIcon from "../../assets/navbarMenus/envelopeIcon.svg";
 import mariaImage from "../../assets/navbarMenus/mariaImage.jpg";
 import notificationImage from "../../assets/navbarMenus/notificationImage.jpg";
-
 import userImg from "../../assets/user.svg";
 
 import s from "./Header.module.scss";
@@ -139,9 +138,10 @@ class Header extends React.Component {
           </NavItem>
           <Dropdown nav isOpen={this.state.menuOpen} toggle={this.toggleMenu} className="tutorial-dropdown mr-2 mr-sm-3">
             <DropdownToggle nav>
-              <span className={s.navbarBlock}>
-                  <BellIcon maskId={114}/>
-              </span>
+              <div className={s.navbarBlock}>
+                  <BellIcon maskId={114}></BellIcon>
+                  <div className={s.count}></div>
+              </div>
             </DropdownToggle>
             <DropdownMenu right className="navbar-dropdown" style={{ width: "340px" }}>
               <DropdownItem><img src={basketIcon}/><span>12 new orders have arrived today</span></DropdownItem>

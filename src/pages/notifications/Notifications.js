@@ -1,74 +1,129 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import uuid from "uuid/v4";
+import classnames from "classnames";
+import { v4 as uuidv4 } from "uuid";
 import {
   Col,
   Row,
-  Container,
-  Progress,
   Button,
 } from "reactstrap";
 import Widget from "../../components/Widget/Widget.js";
 import Code from "../../components/Code/Code.js";
+import Notification from "../../components/Notification/Notification.js";
 import s from "./Notifications.module.scss";
+import successIcon from "../../assets/notificationsIcons/successIcon.svg";
+import closeIcon from "../../assets/notificationsIcons/closeIcon.svg";
 
-toast.configure();
+const positions = [
+  toast.POSITION.TOP_LEFT,
+  toast.POSITION.TOP_CENTER,
+  toast.POSITION.TOP_RIGHT,
+  toast.POSITION.BOTTOM_LEFT,
+  toast.POSITION.BOTTOM_CENTER,
+  toast.POSITION.BOTTOM_RIGHT
+];
 
-class Notifications extends React.Component {
-  state = {
-    options: {
-      position: "top-right",
-      autoClose: 3000,
-      closeOnClick: false,
-      pauseOnHover: false,
-      draggable: true,
-      hideProgressBar: true,
-    },
-  };
+const notificationTypes = ["info", "success", "warning", "error"]
 
-  componentDidMount() {
-    toast.success("Success: You successfully read this important alert message.", {
-      position: "bottom-right",
-      autoClose: 3000,
-      closeOnClick: true,
-      pauseOnHover: false,
-      draggable: true,
-      hideProgressBar: true,
-    });
+const Notifications = function () {
+
+  const [notificationPosition, setNotificationPosition] = useState(2)
+
+  function changeNotificationPosition(positionId) {
+    setNotificationPosition(positionId)
   }
 
-  // var [errorToastId, setErrorToastId] = useState(null);
+  const getRandomNotification = () => {
+    return notificationTypes[Math.floor(Math.random()*notificationTypes.length)]
+  }
 
-  render() {
-    return (
-      <div>
-        <Row className="gutter mb-4">
-          <Col xs={12} lg={4}>
-            <Widget className="widget-p-md">
-              <p className="headline-2">Layout Options</p>
-              <p className={s.widgetText}>There are few position options available for notifications. You can click any of them to change notifications position:</p>
-            </Widget>
-          </Col>
-          <Col xs={12} lg={4}>
-            <Widget className="widget-p-md">
-              <p className="headline-2">Notification Types</p>
-              <p className={s.widgetText}>Different types of notifications for lots of use cases. Custom classes are also supported.</p>
-              <p className=" headline-3 my-1">Message with icon</p>
-              <Button
-                color="primary"
-                // onClick={() => handleNotificationCall("info")}
-                // className={classnames(classes.notificationCallButton)}
-              >
-                Info Message
-              </Button>
-            </Widget>
-          </Col>
-          <Col xs={12} lg={4}>
-            <Widget className="widget-p-md">
-              <p className="headline-2">Notification Types</p>
-              <p className={s.widgetText}>Different types of notifications for lots of use cases. Custom classes are also supported.</p>
-              <Code>{`
+  const options = {
+    autoClose: 4000,
+    closeButton: false,
+    hideProgressBar: true,
+    position: positions[notificationPosition],
+  };
+
+  return (
+    <div>
+      <Row className="gutter mb-4">
+        <Col xs={12} lg={4}>
+          <Widget className="widget-p-md">
+            <div className="headline-2">Layout Options</div>
+            <div className={s.widgetText}>There are few position options available for notifications. You can click any of them to change notifications position:</div>
+            <div className={s.layoutContainer}>
+              <div className={s.layoutButtonsRow}>
+                <button
+                  onClick={() => changeNotificationPosition(0)}
+                  className={classnames(s.layoutButton, {[s.layoutButtonActive]: notificationPosition === 0})}
+                />
+                <button
+                  onClick={() => changeNotificationPosition(1)}
+                  className={classnames(s.layoutButton, {[s.layoutButtonActive]: notificationPosition === 1})}
+                />
+                <button
+                  onClick={() => changeNotificationPosition(2)}
+                  className={classnames(s.layoutButton, {[s.layoutButtonActive]: notificationPosition === 2})}
+                />
+              </div>
+              <div className={s.layoutText}>Click any position</div>
+              <div className={s.layoutButtonsRow}>
+                <button
+                  onClick={() => changeNotificationPosition(3)}
+                  className={classnames(s.layoutButton, {[s.layoutButtonActive]: notificationPosition === 3})}
+                />
+                <button
+                  onClick={() => changeNotificationPosition(4)}
+                  className={classnames(s.layoutButton, {[s.layoutButtonActive]: notificationPosition === 4})}
+                />
+                <button
+                  onClick={() => changeNotificationPosition(5)}
+                  className={classnames(s.layoutButton, {[s.layoutButtonActive]: notificationPosition === 5})}
+                />
+              </div>
+            </div>
+          </Widget>
+        </Col>
+        <Col xs={12} lg={4} className="mt-4 mt-lg-0">
+          <Widget className="widget-p-md">
+            <div className="headline-2">Notification Types</div>
+            <div className={s.widgetText}>Different types of notifications for lots of use cases. Custom classes are also supported.</div>
+            <div className=" headline-3 mt-4 mb-2">Message with icon</div>
+            <Button
+              color="primary"
+              className="notification-btn"
+              onClick={() => {
+                let value = getRandomNotification();
+                toast(<Notification type={value} withIcon />, options)}
+              }
+            >
+              <div className="d-flex">
+                <img src={successIcon}/>
+                <div className="ml-2 body-2">Default message</div>
+              </div>
+              <img src={closeIcon}/>
+            </Button>
+            <div className=" headline-3 mt-4 mb-2">Message without icon</div>
+            <Button
+              color="primary"
+              className="notification-btn"
+              onClick={() => {
+                let value = getRandomNotification();
+                toast(<Notification type={value}/>, options)
+                }
+              }
+            >
+              <div className="ml-2 body-2">Default message</div>
+              <img src={closeIcon}/>
+            </Button>
+          </Widget>
+        </Col>
+        <Col xs={12} lg={4} className="mt-4 mt-lg-0">
+          <Widget className="widget-p-md">
+            <div className="headline-2">Notification Types</div>
+            <div className={s.widgetText}>Different types of notifications for lots of use cases. Custom classes are also supported.</div>
+            <Code>{`
   // import needed components, functions and styles
   import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
@@ -82,32 +137,61 @@ class Notifications extends React.Component {
     </div>
   };
             `}</Code>
-              <p className="label muted">For more API information refer to the library documentation</p>
-            </Widget>
-          </Col>
-        </Row>
-        <Row className="gutter mb-4">
-          <Col xs={12} lg={6}>
-            <Widget className="widget-p-md">
-              <p className="headline-2">Notification Types Examples</p>
-            </Widget>
-          </Col>
-          <Col xs={12} lg={6}>
-            <Widget className="widget-p-md">
-              <p className="headline-2">Notifications Types Examples, without icons</p>
-            </Widget>
-          </Col>
-        </Row>
-      </div>
-    )
-  }
+            <p className="label muted">For more API information refer to the library documentation</p>
+          </Widget>
+        </Col>
+      </Row>
+      <Row className="gutter mb-4">
+        <Col xs={12} lg={6}>
+          <Widget className="widget-p-md">
+            <div className="headline-2 mb-4">Notification Types Examples</div>
+            <Notification
+              key={uuidv4()}
+              type="info"
+              withIcon
+            />
+            <Notification
+              key={uuidv4()}
+              type="error"
+              withIcon
+            />
+            <Notification
+              key={uuidv4()}
+              type="success"
+              withIcon
+            />
+            <Notification
+              key={uuidv4()}
+              type="warning"
+              withIcon
+            />
+          </Widget>
+        </Col>
+        <Col xs={12} lg={6} className="mt-4 mt-lg-0">
+          <Widget className="widget-p-md">
+            <div className="headline-2 mb-4">Notifications Types Examples, without icons</div>
+            <Notification
+              key={uuidv4()}
+              type="info"
+            />
+            <Notification
+              key={uuidv4()}
+              type="error"
+            />
+            <Notification
+              key={uuidv4()}
+              type="success"
+            />
+            <Notification
+              key={uuidv4()}
+              type="warning"
+            />
+          </Widget>
+        </Col>
+      </Row>
+    </div>
+  )
 }
 
-// function handleNotificationCall(notificationType) {
-//   var componentProps;
-//
-// }
-
 export default Notifications;
-
 

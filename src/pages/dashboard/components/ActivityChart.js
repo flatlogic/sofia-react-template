@@ -50,7 +50,7 @@ const chartSettings = {
       show: false
     },
     labels: {
-      show: false,
+      show: true,
       style: {
         colors: "#6B859E",
       },

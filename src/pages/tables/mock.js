@@ -90,7 +90,7 @@ export default {
       status: "Declined",
     },
   ],
-  transactionWidget: [
+  transactionsWidget: [
     {
       id: 1,
       icon: basketIcon,
@@ -98,6 +98,7 @@ export default {
       date: "05 Jun 2020 10:00",
       price: "$300",
       description: "Some text",
+      dropdownOpen: false,
     },
     {
       id: 2,
@@ -106,6 +107,7 @@ export default {
       date: "05 Jun 2020 10:00",
       price: "$300",
       description: "Some text",
+      dropdownOpen: false,
     },
     {
       id: 3,
@@ -114,6 +116,7 @@ export default {
       date: "05 Jun 2020 10:00",
       price: "$300",
       description: "Some text",
+      dropdownOpen: false,
     },
     {
       id: 4,
@@ -122,6 +125,7 @@ export default {
       date: "05 Jun 2020 10:00",
       price: "$300",
       description: "Some text",
+      dropdownOpen: false,
     }
   ],
   tasksWidget: [

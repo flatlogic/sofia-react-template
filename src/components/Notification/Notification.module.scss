@@ -1,3 +1,26 @@
 @import "../../styles/helpers";
 
+.notificationContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-base;
+  color: $white;
+}
 
+.notificationIconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+
+.messageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+}
