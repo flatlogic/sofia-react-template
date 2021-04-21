@@ -215,7 +215,14 @@ h6,
 }
 
 ///////// Tables //////////
+.react-bootstrap-table {
+  table {
+    overflow-x: auto;
+    width: 100%;
+  }
+}
 .widget-table-overflow {
+  width: 100%;
   margin: 0 0 24px;
 
   th:first-child,
@@ -233,7 +240,6 @@ h6,
   }
 }
 
-
 .table-bordered th {
   background-color: $gray-300;
 }
@@ -245,9 +251,108 @@ table > thead > tr > th {
 }
 
 .table-striped {
+  thead {
+    th {
+      border: none;
+    }
+  }
   tbody {
     tr:nth-of-type(odd) {
       background-color: $base-light-gray;
+    }
+    td {
+      border: none;
+    }
+  }
+}
+
+.pagination {
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-with-border {
+
+}
+
+.page-link {
+  padding: 4px 12px;
+  border: $pagination-border-width solid $pagination-border-color;
+
+  &:hover {
+    background-color: transparent;
+    border-color: $pagination-hover-border-color;
+  }
+
+  &:focus {
+    z-index: 3;
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.page-item {
+  margin-left: 16px;
+  margin-right: 16px;
+  &:first-child {
+    .page-link {
+      border: none;
+      margin-right: 80px;
+      font-size: 36px;
+      line-height: 1;
+
+      @media (max-width: breakpoint-max(md)) {
+        margin-right: 8px;
+      }
+    }
+  }
+  &:last-child {
+    .page-link {
+      margin-left: 80px;
+      border: none;
+      font-size: 36px;
+      line-height: 1;
+
+      @media (max-width: breakpoint-max(md)) {
+        margin-left: 8px;
+      }
+    }
+  }
+  @media (max-width: breakpoint-max(md)) {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+}
+
+.pagination-borderless {
+  .page-item {
+    .page-link {
+      border: none;
+      color: $pagination-disabled-color;
+    }
+    &.active .page-link {
+      z-index: 3;
+      color: $violet;
+      background-color: transparent;
+      border: none;
+    }
+
+    &:first-child {
+      .page-link {
+        color: $violet;
+      }
+    }
+    &:last-child {
+      .page-link {
+        color: $violet;
+      }
+    }
+    &.disabled .page-link {
+      color: $pagination-disabled-color;
+      pointer-events: none;
+      cursor: auto;
+      background-color: $pagination-disabled-bg;
+      border-color: $pagination-disabled-border-color;
     }
   }
 }
@@ -360,6 +465,8 @@ table > thead > tr > th {
   padding: 0;
   width: 460px;
 }
+
+///////// React-Bootstrap-Table //////////
 
 ///////// Other //////////
 

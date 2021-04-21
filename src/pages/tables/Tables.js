@@ -3,6 +3,9 @@ import {
   Col,
   Row,
   Table,
+  Pagination,
+  PaginationItem,
+  PaginationLink,
   ButtonDropdown,
   Dropdown,
   DropdownMenu,
@@ -14,8 +17,10 @@ import {
 } from "reactstrap";
 import Widget from "../../components/Widget/Widget.js";
 import TaskContainer from "./components/TaskContainer/TaskContainer.js";
-import s from "./Tables.module.scss";
-import mock from "./mock.js";
+
+// import BootstrapTable from "react-bootstrap-table-next";
+// import paginationFactory from 'react-bootstrap-table2-paginator';
+// import MUIDataTable from "mui-datatables";
 
 import cloudIcon from "../../assets/tables/cloudIcon.svg";
 import funnelIcon from "../../assets/tables/funnelIcon.svg";
@@ -24,6 +29,12 @@ import printerIcon from "../../assets/tables/printerIcon.svg";
 import searchIcon from "../../assets/tables/searchIcon.svg";
 import moreIcon from "../../assets/tables/moreIcon.svg";
 
+import s from "./Tables.module.scss";
+import mock from "./mock.js";
+import janeCooperImg from "../../assets/tables/janeCooper.png";
+import ellieSmithImg from "../../assets/tables/ellieSmithImg.png";
+import rosaFloresImg from "../../assets/tables/rosaFloresImg.png";
+import floydMilesImg from "../../assets/tables/floydMilesImg.png";
 
 const Tables = function () {
 
@@ -32,6 +43,23 @@ const Tables = function () {
   const [secondTable] = useState(mock.secondTable);
   const [transactions, setTransactions] = useState(mock.transactionsWidget);
   const [tasks, setTasks] = useState(mock.tasksWidget);
+  const [firstTableCurrentPage, setFirstTableCurrentPage] = useState(0);
+  const [secondTableCurrentPage, setSecondTableCurrentPage] = useState(0);
+  const [tableDropdownOpen, setTableMenuOpen] = useState(false);
+
+  const pageSize = 4;
+  const firstTablePagesCount = Math.ceil(firstTable.length / pageSize);
+  const secondTablePagesCount = Math.ceil(secondTable.length / pageSize);
+
+  const setFirstTablePage = (e, index) => {
+    e.preventDefault();
+    setFirstTableCurrentPage(index);
+  }
+
+  const setSecondTablePage = (e, index) => {
+    e.preventDefault();
+    setSecondTableCurrentPage(index);
+  }
 
   const toggle = () => {
     setDropdownOpen(!dropdownOpen);
@@ -46,6 +74,10 @@ const Tables = function () {
         return transaction;
       })
     )
+  }
+
+  const tableMenuOpen = () => {
+    setTableMenuOpen(!tableDropdownOpen);
   }
 
   const toggleTask = (id) => {
@@ -95,24 +127,52 @@ const Tables = function () {
                     </tr>
                     </thead>
                     <tbody>
-                    {firstTable.map(item => (
-                      <tr>
-                        <td>
-                          <div>
-                            <Input
-                              id={item.id} type="checkbox"
-                            />
-                            <Label for={item.id} />
-                          </div>
-                        </td>
-                        <td className="d-flex align-items-center"><img className={s.image} src={item.img}/><span className="ml-3">{item.name}</span></td>
-                        <td>{item.company}</td>
-                        <td>{item.city}</td>
-                        <td>{item.state}</td>
-                      </tr>
-                    ))}
+                    {firstTable
+                      .slice(
+                        firstTableCurrentPage * pageSize,
+                        (firstTableCurrentPage + 1) * pageSize
+                      )
+                      .map(item => (
+                        <tr>
+                          <td>
+                            <div>
+                              <Input
+                                id={item.id} type="checkbox"
+                              />
+                              <Label for={item.id} />
+                            </div>
+                          </td>
+                          <td className="d-flex align-items-center"><img className={s.image} src={item.img}/><span className="ml-3">{item.name}</span></td>
+                          <td>{item.company}</td>
+                          <td>{item.city}</td>
+                          <td>{item.state}</td>
+                        </tr>
+                      ))}
                     </tbody>
                   </Table>
+                  <Pagination className="pagination-borderless" aria-label="Page navigation example">
+                    <PaginationItem disabled={firstTableCurrentPage <= 0}>
+                      <PaginationLink
+                        onClick={e => setFirstTablePage(e, firstTableCurrentPage - 1)}
+                        previous
+                        href="#"
+                      />
+                    </PaginationItem>
+                    {[...Array(firstTablePagesCount)].map((page, i) =>
+                      <PaginationItem active={i === firstTableCurrentPage} key={i}>
+                        <PaginationLink onClick={e => setFirstTablePage(e, i)} href="#">
+                          {i + 1}
+                        </PaginationLink>
+                      </PaginationItem>
+                    )}
+                    <PaginationItem disabled={firstTableCurrentPage >= firstTablePagesCount - 1}>
+                      <PaginationLink
+                        onClick={e => setFirstTablePage(e, firstTableCurrentPage + 1)}
+                        next
+                        href="#"
+                      />
+                    </PaginationItem>
+                  </Pagination>
                 </div>
               </Widget>
             </Col>
@@ -122,7 +182,27 @@ const Tables = function () {
               <Widget>
                 <div className={s.tableTitle}>
                   <div className="headline-2">Material UI table</div>
-                    <img src={moreIcon} />
+                  <Dropdown
+                    className="d-none d-sm-block"
+                    nav
+                    isOpen={tableDropdownOpen}
+                    toggle={() => tableMenuOpen()}
+                  >
+                    <DropdownToggle nav>
+                      <img className="d-none d-sm-block" src={moreIcon}/>
+                    </DropdownToggle>
+                    <DropdownMenu >
+                      <DropdownItem>
+                        <div>Copy</div>
+                      </DropdownItem>
+                      <DropdownItem>
+                        <div>Edit</div>
+                      </DropdownItem>
+                      <DropdownItem>
+                        <div>Delete</div>
+                      </DropdownItem>
+                    </DropdownMenu>
+                  </Dropdown>
                 </div>
                 <div className="widget-table-overflow">
                   <Table className="table-striped table-borderless" responsive>
@@ -146,7 +226,12 @@ const Tables = function () {
                     </tr>
                     </thead>
                     <tbody>
-                    {secondTable.map(item => (
+                    {secondTable
+                      .slice(
+                        secondTableCurrentPage * pageSize,
+                        (secondTableCurrentPage + 1) * pageSize
+                      )
+                      .map(item => (
                       <tr>
                         <td>
                           <div>
@@ -167,6 +252,29 @@ const Tables = function () {
                     ))}
                     </tbody>
                   </Table>
+                  <Pagination className="pagination-with-border">
+                    <PaginationItem disabled={secondTableCurrentPage <= 0}>
+                      <PaginationLink
+                        onClick={e => setSecondTablePage(e, secondTableCurrentPage - 1)}
+                        previous
+                        href="#"
+                      />
+                    </PaginationItem>
+                    {[...Array(secondTablePagesCount)].map((page, i) =>
+                      <PaginationItem active={i === secondTableCurrentPage} key={i}>
+                        <PaginationLink onClick={e => setSecondTablePage(e, i)} href="#">
+                          {i + 1}
+                        </PaginationLink>
+                      </PaginationItem>
+                    )}
+                    <PaginationItem disabled={secondTableCurrentPage >= secondTablePagesCount - 1}>
+                      <PaginationLink
+                        onClick={e => setSecondTablePage(e, secondTableCurrentPage + 1)}
+                        next
+                        href="#"
+                      />
+                    </PaginationItem>
+                  </Pagination>
                 </div>
               </Widget>
             </Col>
@@ -223,9 +331,6 @@ const Tables = function () {
                           </DropdownItem>
                         </DropdownMenu>
                       </Dropdown>
-
-                      {/*/// ВЫНЕСТИ ОТДЕЛЬНЫМ КОМПОНЕНТОМ И СДЕЛАТЬ КАК ТАСК КОНТЕЙНЕР !!!*/}
-
                     </div>
                   ))}
                 </div>

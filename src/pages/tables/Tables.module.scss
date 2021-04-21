@@ -38,6 +38,25 @@
     height: 32px;
 }
 
+.bootstrapTable {
+  border: none;
+
+  :global .table {
+    thead,
+    tbody {
+      th,
+      td {
+        border-right: none;
+        border-left: none;
+      }
+    }
+
+    thead th {
+      background: transparent;
+    }
+  }
+}
+
 //.moreButton {
 //  img {
 //    backgroundColor: red;
