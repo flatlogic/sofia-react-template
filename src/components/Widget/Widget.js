@@ -5,11 +5,6 @@ import s from './Widget.module.scss';
 import classNames from 'classnames';
 import { v4 as uuidv4 } from "uuid";
 
-import {
-  Button,
-  Modal,
-} from 'reactstrap';
-
 class Widget extends React.Component {
   static propTypes = {
     title: PropTypes.node,
@@ -18,7 +13,7 @@ class Widget extends React.Component {
       PropTypes.arrayOf(PropTypes.node),
       PropTypes.node,
 ]),
-    options: PropTypes.object, //eslint-disable-line,
+    options: PropTypes.object,
   };
 
   static defaultProps = {

@@ -4,7 +4,6 @@ import {
   GoogleMap,
   useJsApiLoader
 } from "@react-google-maps/api";
-import { Row, Col } from "reactstrap";
 
 const containerStyle = {
   width: "100%",
@@ -22,7 +21,7 @@ function GoogleMapPage() {
     googleMapsApiKey: "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyB7OXmzfQYua_1LEhRdqsoYzyJOPh9hGLg",
   })
 
-  const [map, setMap] = React.useState(null)
+  const [, setMap] = React.useState(null)
 
   const onLoad = React.useCallback(function callback(map) {
     const bounds = new window.google.maps.LatLngBounds();

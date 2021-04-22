@@ -9,18 +9,12 @@ import {
   NavItem,
   NavLink,
   InputGroupAddon,
-  InputGroupText,
   InputGroup,
   Input,
-  UncontrolledAlert,
   Dropdown,
-  Collapse,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  Badge,
-  ButtonGroup,
-  Button,
   Form,
   FormGroup,
 } from "reactstrap";
@@ -57,13 +51,11 @@ class Header extends React.Component {
     this.doLogout = this.doLogout.bind(this);
     this.toggleSidebar = this.toggleSidebar.bind(this);
     this.toggleNotifications = this.toggleNotifications.bind(this);
-    // this.toggleSearchOpen = this.toggleSearchOpen(this);
 
     this.state = {
       menuOpen: false,
       notificationsOpen: false,
       searchFocused: false,
-      // searchOpen: false,
     };
   }
 
@@ -74,20 +66,12 @@ class Header extends React.Component {
   toggleSidebar() {
     if (this.props.sidebarOpened) {
       this.props.dispatch(closeSidebar());
-      // this.props.dispatch(changeActiveSidebarItem(null));
     } else {
       const paths = this.props.location.pathname.split('/');
       paths.pop();
       this.props.dispatch(openSidebar());
-      // this.props.dispatch(changeActiveSidebarItem(paths.join('/')));
     }
   }
-
-  // toggleSearchOpen() {
-  //   this.setState({
-  //     searchOpen: !this.state.searchOpen,
-  //   });
-  // }
 
   toggleMenu() {
     this.setState({
@@ -129,7 +113,6 @@ class Header extends React.Component {
         <Nav className="ml-auto">
           <NavItem className="d-sm-none mr-4">
             <NavLink
-              // onClick={this.toggleSearchOpen}
               className=""
               href="#"
             >
@@ -144,38 +127,38 @@ class Header extends React.Component {
               </div>
             </DropdownToggle>
             <DropdownMenu right className="navbar-dropdown" style={{ width: "340px" }}>
-              <DropdownItem><img src={basketIcon}/><span>12 new orders have arrived today</span></DropdownItem>
+              <DropdownItem><img src={basketIcon} alt="Basket Icon"/><span>12 new orders have arrived today</span></DropdownItem>
               <DropdownItem>
                 <div>
                   <div className="d-flex flex-row mb-1">
-                    <img src={mariaImage} className={s.mariaImage} />
+                    <img src={mariaImage} alt="Maria" className={s.mariaImage} />
                     <div className="d-flex flex-column">
                       <p className="body-3">Maria</p>
                       <p className="label muted">15 min ago</p>
                     </div>
                   </div>
-                  <img src={notificationImage} className={s.notificationImage}/>
+                  <img src={notificationImage} alt="Notification Icon" className={s.notificationImage}/>
                   <p className="body-2 muted">It is just a simple image that can define th..</p>
                 </div>
               </DropdownItem>
-              <DropdownItem><img src={calendarIcon}/><span>1 event has been canceled and ..</span></DropdownItem>
-              <DropdownItem><img src={envelopeIcon}/><span>you have 2 new messages</span></DropdownItem>
+              <DropdownItem><img src={calendarIcon} alt="Calendar Icon"/><span>1 event has been canceled and ..</span></DropdownItem>
+              <DropdownItem><img src={envelopeIcon} alt="Envelope Icon"/><span>you have 2 new messages</span></DropdownItem>
             </DropdownMenu>
           </Dropdown>
           <Dropdown isOpen={this.state.notificationsOpen} toggle={this.toggleNotifications} nav id="basic-nav-dropdown" className="ml-3">
             <DropdownToggle nav caret className="navbar-dropdown-toggle">
               <span className={`${s.avatar} rounded-circle float-left mr-2`}>
-                <img src={userImg} alt="..."/>
+                <img src={userImg} alt="User"/>
               </span>
               <span className="small d-none d-sm-block ml-1 mr-2 body-1">Christina Carey</span>
             </DropdownToggle>
-            <DropdownMenu left className="navbar-dropdown" style={{ width: "194px" }}>
-              <DropdownItem><img src={profileIcon}/><span>Profile</span></DropdownItem>
-              <DropdownItem><img src={tasksIcon}/><span>Tasks</span></DropdownItem>
-              <DropdownItem><img src={messagesIcon}/><span>Messages</span></DropdownItem>
+            <DropdownMenu className="navbar-dropdown" style={{ width: "194px" }}>
+              <DropdownItem><img src={profileIcon} alt="Profile Icon"/><span>Profile</span></DropdownItem>
+              <DropdownItem><img src={tasksIcon} alt="Tasks Icon"/><span>Tasks</span></DropdownItem>
+              <DropdownItem><img src={messagesIcon} alt="Message Icon"/><span>Messages</span></DropdownItem>
               <NavItem>
                 <NavLink onClick={this.doLogout} href="#">
-                  <button className="btn btn-primary rounded-pill mx-auto logout-btn" type="submit"><img src={logoutIcon}/><span className="ml-1">Logout</span></button>
+                  <button className="btn btn-primary rounded-pill mx-auto logout-btn" type="submit"><img src={logoutIcon} alt="Logout Icon"/><span className="ml-1">Logout</span></button>
                 </NavLink>
               </NavItem>
             </DropdownMenu>

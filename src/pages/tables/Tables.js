@@ -31,10 +31,6 @@ import moreIcon from "../../assets/tables/moreIcon.svg";
 
 import s from "./Tables.module.scss";
 import mock from "./mock.js";
-import janeCooperImg from "../../assets/tables/janeCooper.png";
-import ellieSmithImg from "../../assets/tables/ellieSmithImg.png";
-import rosaFloresImg from "../../assets/tables/rosaFloresImg.png";
-import floydMilesImg from "../../assets/tables/floydMilesImg.png";
 
 const Tables = function () {
 

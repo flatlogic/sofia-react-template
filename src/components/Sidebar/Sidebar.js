@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import {Progress, Alert, Button} from 'reactstrap';
+import { Button} from 'reactstrap';
 import { withRouter } from 'react-router-dom';
 import s from "./Sidebar.module.scss";
 import LinksGroup from "./LinksGroup/LinksGroup.js";

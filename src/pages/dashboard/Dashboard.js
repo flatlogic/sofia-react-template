@@ -1,7 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
-import {connect} from "react-redux";
-import cx from "classnames";
+import { v4 as uuidv4 } from "uuid";
 import {
   Col,
   Row,
@@ -44,7 +42,6 @@ class Dashboard extends React.Component {
       dropdownOpenOne: false,
       dropdownOpenTwo: false,
       dropdownOpenThree: false,
-
       checkboxes: [false, true],
     };
   }
@@ -71,6 +68,7 @@ class Dashboard extends React.Component {
 
   changeCheck(event, checkbox, id) {
     this.state[checkbox][id] = event.target.checked;
+
     if (!event.target.checked) {
       this.state[checkbox][id] = false;
     }
@@ -125,7 +123,7 @@ class Dashboard extends React.Component {
                     </ButtonDropdown>
                   </div>
                   {this.meals.map((meal) =>
-                    <div className={`mt-4 ${s.widgetBlock}`}>
+                    <div key={uuidv4()} className={`mt-4 ${s.widgetBlock}`}>
                       <div className={s.widgetBody}>
                         <div className="d-flex">
                           <img className="img-fluid mr-2" src={meal} alt="..." />

@@ -33,7 +33,7 @@ const chartSettings = {
     ],
     labels: {
       style: {
-        colors: ["#6B859E", "#6B859E", "#6B859E", "#6B859E", "#6B859E", "#6B859E", "#6B859E", "#6B859E"],
+        colors: "#6B859E",
         opacity: 0.7,
       },
     },
@@ -52,7 +52,6 @@ const chartSettings = {
     },
   },
   fill: {
-    // colors: ["#4D53E0", "#41D5E2"],
     type: "gradient",
     gradient: {
       shadeIntensity: 1,

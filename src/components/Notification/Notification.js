@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import { Alert } from "reactstrap";
-import classnames from "classnames";
 
 import infoIcon from "../../assets/notificationsIcons/infoIcon.svg";
 import warningIcon from "../../assets/notificationsIcons/warningIcon.svg";
 import successIcon from "../../assets/notificationsIcons/successIcon.svg";
 import dangerIcon from "../../assets/notificationsIcons/dangerIcon.svg";
-import closeIcon from "../../assets/notificationsIcons/closeIcon.svg";
 
 import s from "./Notification.module.scss";
 
@@ -52,7 +50,7 @@ export default function Notification({ ...props }) {
         toggle={() => closeNotification()}
       >
         <div className={s.notificationIconContainer}>
-          {props.withIcon && <img src={icon}/>}
+          {props.withIcon && <img src={icon} alt="..."/>}
         </div>
         <div className={s.messageContainer}>
           <span dangerouslySetInnerHTML={{__html: notificationMessages[props.type]}}></span>

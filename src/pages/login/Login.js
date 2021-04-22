@@ -6,15 +6,10 @@ import {
   Container,
   Row,
   Col,
-  Alert,
   Button,
   FormGroup,
   FormText,
-  Label,
   Input,
-  InputGroup,
-  InputGroupAddon,
-  InputGroupText
 } from "reactstrap";
 import Widget from "../../components/Widget/Widget.js";
 import Footer from "../../components/Footer/Footer.js";
@@ -120,7 +115,7 @@ class Login extends React.Component {
             </Col>
             <Col xs={0} lg={6} className="right-column">
               <div>
-                <img src={loginImage} alt="Error page image" />
+                <img src={loginImage} alt="Error page" />
               </div>
             </Col>
           </Row>

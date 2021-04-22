@@ -99,10 +99,10 @@ const Notifications = function () {
               }
             >
               <div className="d-flex">
-                <img src={successIcon}/>
+                <img src={successIcon} alt="..."/>
                 <div className="ml-2 body-2">Default message</div>
               </div>
-              <img src={closeIcon}/>
+              <img src={closeIcon} alt="..."/>
             </Button>
             <div className=" headline-3 mt-4 mb-2">Message without icon</div>
             <Button
@@ -115,7 +115,7 @@ const Notifications = function () {
               }
             >
               <div className="ml-2 body-2">Default message</div>
-              <img src={closeIcon}/>
+              <img src={closeIcon} alt="..."/>
             </Button>
           </Widget>
         </Col>

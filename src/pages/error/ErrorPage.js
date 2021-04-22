@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Container,
   Button,
 } from "reactstrap";
 import { Link } from "react-router-dom";
@@ -28,7 +27,7 @@ class ErrorPage extends React.Component {
           </Link>
         </div>
         <div className={s.imageContainer}>
-          <img className={s.errorImage} src={errorImage} alt="Error page image" width="80" />
+          <img className={s.errorImage} src={errorImage} alt="Error page" width="80" />
         </div>
         <div className={s.footer}>
           <span className={s.footerLabel}>2021 &copy; Flatlogic. Hand-crafted & Made with</span>

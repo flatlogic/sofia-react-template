@@ -2,7 +2,6 @@ import React from "react";
 import {
   Col,
   Row,
-  Container,
 } from "reactstrap";
 import Widget from "../../components/Widget/Widget.js";
 

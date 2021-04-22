@@ -6,17 +6,14 @@ import {
   Container,
   Row,
   Col,
-  Alert,
   Button,
   FormGroup,
   FormText,
-  Label,
   Input,
 } from "reactstrap";
 import Widget from "../../components/Widget/Widget.js";
 import Footer from "../../components/Footer/Footer.js";
 import Login from "../login/Login.js";
-import { loginUser } from "../../actions/auth.js";
 
 import loginImage from "../../assets/registerImage.svg";
 import SofiaLogo from "../../components/Icons/SidebarIcons/SofiaLogo.js";
@@ -121,7 +118,7 @@ class Register extends React.Component {
             </Col>
             <Col xs={0} lg={6} className="right-column">
               <div>
-                <img src={loginImage} alt="Error page image" />
+                <img src={loginImage} alt="Error page" />
               </div>
             </Col>
           </Row>

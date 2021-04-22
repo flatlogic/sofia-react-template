@@ -10,7 +10,6 @@ import RechartsPieChart from "./components/RechartsPieChart.js";
 import ApexLineChart from "./components/ApexLineChart.js";
 import ApexColumnAreaChart from "./components/ApexColumnAreaChart.js";
 import ApexLineColumnChart from "./components/ApexLineColumnChart.js";
-import s from "./Charts.module.scss";
 
 class Charts extends React.Component {
 
