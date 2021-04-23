@@ -2,7 +2,9 @@
 
 Free and open-source admin dashboard template built with React v17.0.1 and Bootstrap v4.6. Developed with ❤️ by [Flatlogic](https://flatlogic.com/). If you love our project please star ⭐️ our repo!
 
-[Download](https://github.com/flatlogic/sofia-react-template.git) | [More templates](https://flatlogic.com/templates)
+[View Demo](https://flatlogic.github.io/sofia-react-template/) | [Download](https://github.com/flatlogic/sofia-react-template.git) | [More templates](https://flatlogic.com/templates)
+
+[![image](https://user-images.githubusercontent.com/63450826/115870580-1ad99600-a448-11eb-87a0-56739fc1707b.png)](https://flatlogic.github.io/sofia-react-template/)
 
 This dashboard is an initial version (containing only few components) of our future release of Sofia React Admin. It is built on the top of React 17, so it well supported along the web. You can easy customize template by changing SCSS variables. All paddings and colors are in _variables.scss file.
 
@@ -87,4 +89,4 @@ For any additional information please go to our [**support forum**](https://flat
 Looking for premium themes and templates? Check out more [admin dashboard templates at flatlogic.com](https://flatlogic.com/admin-dashboards).
 
 ## License
-
+[MIT License](https://github.com/flatlogic/sofia-react-template/blob/master/LICENSE)
