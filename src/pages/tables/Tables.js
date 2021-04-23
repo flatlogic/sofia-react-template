@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import {
   Col,
   Row,
@@ -97,11 +98,11 @@ const Tables = function () {
                 <div className={s.tableTitle}>
                   <div className="headline-2">States Colors</div>
                   <div className="d-flex">
-                    <a><img src={searchIcon} /></a>
-                    <a><img className="d-none d-sm-block" src={cloudIcon} /></a>
-                    <a><img src={printerIcon} /></a>
-                    <a><img className="d-none d-sm-block" src={optionsIcon} /></a>
-                    <a><img src={funnelIcon} /></a>
+                    <a href="#top"><img src={searchIcon} alt="Search"/></a>
+                    <a href="#top"><img className="d-none d-sm-block" src={cloudIcon} alt="Cloud" /></a>
+                    <a href="#top"><img src={printerIcon} alt="Printer" /></a>
+                    <a href="#top"><img className="d-none d-sm-block" src={optionsIcon} alt="Options" /></a>
+                    <a href="#top"><img src={funnelIcon} alt="Funnel" /></a>
                   </div>
                 </div>
                 <div className="widget-table-overflow">
@@ -129,7 +130,7 @@ const Tables = function () {
                         (firstTableCurrentPage + 1) * pageSize
                       )
                       .map(item => (
-                        <tr>
+                        <tr key={uuidv4()}>
                           <td>
                             <div>
                               <Input
@@ -138,7 +139,7 @@ const Tables = function () {
                               <Label for={item.id} />
                             </div>
                           </td>
-                          <td className="d-flex align-items-center"><img className={s.image} src={item.img}/><span className="ml-3">{item.name}</span></td>
+                          <td className="d-flex align-items-center"><img className={s.image} src={item.img} alt="User"/><span className="ml-3">{item.name}</span></td>
                           <td>{item.company}</td>
                           <td>{item.city}</td>
                           <td>{item.state}</td>
@@ -151,12 +152,12 @@ const Tables = function () {
                       <PaginationLink
                         onClick={e => setFirstTablePage(e, firstTableCurrentPage - 1)}
                         previous
-                        href="#"
+                        href="#top"
                       />
                     </PaginationItem>
                     {[...Array(firstTablePagesCount)].map((page, i) =>
                       <PaginationItem active={i === firstTableCurrentPage} key={i}>
-                        <PaginationLink onClick={e => setFirstTablePage(e, i)} href="#">
+                        <PaginationLink onClick={e => setFirstTablePage(e, i)} href="#top">
                           {i + 1}
                         </PaginationLink>
                       </PaginationItem>
@@ -165,7 +166,7 @@ const Tables = function () {
                       <PaginationLink
                         onClick={e => setFirstTablePage(e, firstTableCurrentPage + 1)}
                         next
-                        href="#"
+                        href="#top"
                       />
                     </PaginationItem>
                   </Pagination>
@@ -185,7 +186,7 @@ const Tables = function () {
                     toggle={() => tableMenuOpen()}
                   >
                     <DropdownToggle nav>
-                      <img className="d-none d-sm-block" src={moreIcon}/>
+                      <img className="d-none d-sm-block" src={moreIcon} alt="More..."/>
                     </DropdownToggle>
                     <DropdownMenu >
                       <DropdownItem>
@@ -228,7 +229,7 @@ const Tables = function () {
                         (secondTableCurrentPage + 1) * pageSize
                       )
                       .map(item => (
-                      <tr>
+                      <tr key={uuidv4()}>
                         <td>
                           <div>
                             <Input
@@ -253,12 +254,12 @@ const Tables = function () {
                       <PaginationLink
                         onClick={e => setSecondTablePage(e, secondTableCurrentPage - 1)}
                         previous
-                        href="#"
+                        href="#top"
                       />
                     </PaginationItem>
                     {[...Array(secondTablePagesCount)].map((page, i) =>
                       <PaginationItem active={i === secondTableCurrentPage} key={i}>
-                        <PaginationLink onClick={e => setSecondTablePage(e, i)} href="#">
+                        <PaginationLink onClick={e => setSecondTablePage(e, i)} href="#top">
                           {i + 1}
                         </PaginationLink>
                       </PaginationItem>
@@ -267,7 +268,7 @@ const Tables = function () {
                       <PaginationLink
                         onClick={e => setSecondTablePage(e, secondTableCurrentPage + 1)}
                         next
-                        href="#"
+                        href="#top"
                       />
                     </PaginationItem>
                   </Pagination>
@@ -295,13 +296,13 @@ const Tables = function () {
                         <DropdownItem>Monthly</DropdownItem>
                       </DropdownMenu>
                     </ButtonDropdown>
-                    <img src="" />
+                    {/*<img src="" alt="Filter option"/>*/}
                   </div>
                 </div>
                 <div className={s.widgetContentBlock}>
                   {transactions.map(item => (
-                    <div className={s.content}>
-                      <div><img src={item.icon}/><span className="body-2 ml-3">{item.category}</span></div>
+                    <div key={uuidv4()} className={s.content}>
+                      <div><img src={item.icon} alt="Item" /><span className="body-2 ml-3">{item.category}</span></div>
                       <div className="body-3 muted d-none d-md-block">{item.date}</div>
                       <div className="body-2">{item.price}</div>
                       <div className="body-3 muted d-none d-lg-block">{item.description}</div>
@@ -313,7 +314,7 @@ const Tables = function () {
                         toggle={() => transactionMenuOpen(item.id)}
                       >
                         <DropdownToggle nav>
-                          <img className="d-none d-sm-block" src={moreIcon}/>
+                          <img className="d-none d-sm-block" src={moreIcon} alt="More ..."/>
                         </DropdownToggle>
                         <DropdownMenu >
                           <DropdownItem>

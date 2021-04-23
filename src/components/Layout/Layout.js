@@ -16,9 +16,7 @@ import Charts from "../../pages/uielements/charts/Charts.js";
 import Icons from "../../pages/uielements/icons/IconsPage.js";
 import Maps from "../../pages/uielements/maps/google/GoogleMapPage";
 
-import { openSidebar, closeSidebar } from "../../actions/navigation.js";
 import s from "./Layout.module.scss";
-import ErrorPage from "../../pages/error/ErrorPage";
 
 class Layout extends React.Component {
   static propTypes = {
@@ -29,10 +27,6 @@ class Layout extends React.Component {
   static defaultProps = {
     sidebarOpened: false,
   };
-
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (

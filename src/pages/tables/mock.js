@@ -9,7 +9,7 @@ import basketIcon from "../../assets/tables/basketIcon.svg";
 
 
 
-export default {
+const mock = {
   firstTable: [
     {
       id: "checkbox111",
@@ -355,3 +355,5 @@ export default {
     },
   ]
 }
+
+export default mock;

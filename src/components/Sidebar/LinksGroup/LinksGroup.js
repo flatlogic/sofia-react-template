@@ -110,7 +110,7 @@ class LinksGroup extends React.Component {
               <a className={classnames(s.accordionToggle, { [s.headerLinkActive]: match }, { [s.collapsed]: isOpen }, "d-flex")}
                 // style={{ paddingLeft: `${this.props.deep == 0 ? 16 : 35 + 10 * (this.props.deep - 1)}px`}}
                 onClick={(e) => this.togglePanelCollapse(this.props.link, e)}
-                href="#"
+                href="#top"
               >
                 {this.props.isHeader
                   ? <span className={s.icon}>

@@ -1,4 +1,5 @@
 import React from "react";
+import { v4 as uuidv4 } from "uuid";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 import s from "../Charts.module.scss";
 import Dot from "../../../../components/Dot/Dot";
@@ -33,7 +34,7 @@ const RechartsPieChart = () => {
       </ResponsiveContainer>
       <div className={s.donutLabels}>
         {chartsSettings.donut.data.map((entry, index) => (
-          <div className={s.label}>
+          <div key={uuidv4()} className={s.label}>
             <Dot color={entry.color} />
             <span className="body-3 ml-2">{entry.name}</span>
           </div>

@@ -337,7 +337,7 @@ class Dashboard extends React.Component {
                   </div>
                 </div>
               </div>
-              <a className={`btn-secondary-red ${s.statsBtn}`} href="#" role="button">
+              <a className={`btn-secondary-red ${s.statsBtn}`} href="#top" role="button">
                 <img className={s.pieImg}  src={statsPie} alt="..." />
                 <div>
                   <p className="headline-2">STATISTIC</p>

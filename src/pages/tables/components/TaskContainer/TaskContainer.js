@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import s from "./TaskContainer.module.scss";
 import cx from "classnames";
 
@@ -7,13 +7,19 @@ const TaskContainer = (props) => {
     <ul>
       {props.tasks.map((task) => (
         <li
-          onChange={() => props.toggleTask(task.id)}
           className={cx(`${s.taskBlock}`, { [s.completed]: task.completed })}
           key={task.id}
         >
           <div className={s.taskDescription}>
-            <div className="form-check mr-1">
-              <input checked={task.completed} className="form-check-input" id={`checkbox${task.id}`} type="checkbox" />
+            <div
+              className="form-check mr-1">
+              <input
+                onChange={() => props.toggleTask(task.id)}
+                checked={task.completed}
+                className="form-check-input"
+                id={`checkbox${task.id}`}
+                type="checkbox"
+              />
               <label className="form-check-label" htmlFor={`checkbox${task.id}`} />
             </div>
             <div className="body-3">{task.description}</div>
