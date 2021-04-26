@@ -1,6 +1,5 @@
 import React from "react";
 import classnames from "classnames";
-
 import {
   Row,
   Col,
@@ -15,8 +14,6 @@ import * as Icons from "@material-ui/icons";
 import "font-awesome/css/font-awesome.min.css";
 import "line-awesome/dist/line-awesome/css/line-awesome.min.css";
 import "eva-icons/style/eva-icons.css";
-
-
 import s from "./IconsPage.module.scss";
 
 class IconsPage extends React.Component {
@@ -173,22 +170,22 @@ class IconsPage extends React.Component {
                 <Col xs={12} sm={4} md={3} lg={2}><Icons.AccessibleForward /><span>AccessibleForward</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><Icons.AccessTime /><span>AccessTime</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><Icons.AccountBalance /><span>AccountBalance</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><Icons.AccountBalanceWallet /><span>AccountBalanceWallet</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><Icons.Chat /><span>Chat</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><Icons.AccountBox /><span>AccountBox</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><Icons.AccountCircle /><span>AccountCircle</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><Icons.AcUnit /><span>AcUnit</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><Icons.Adb /><span>Adb</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><Icons.Adjust /><span>Adjust</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><Icons.AirlineSeatFlat /><span>AirlineSeatFlat</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><Icons.AirlineSeatFlatAngled /><span>AirlineSeatFlatAngled</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><Icons.AirlineSeatIndividualSuite /><span>AirlineSeatIndividualSuite</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><Icons.AirlineSeatLegroomExtra /><span>AirlineSeatLegroomExtra</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><Icons.AirlineSeatLegroomNormal /><span>AirlineSeatLegroomNormal</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><Icons.AirlineSeatLegroomReduced /><span>AirlineSeatLegroomReduced</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><Icons.AirlineSeatReclineExtra /><span>AirlineSeatReclineExtra</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><Icons.AirlineSeatReclineNormal /><span>AirlineSeatReclineNormal</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><Icons.AirplanemodeActive /><span>AirplanemodeActive</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><Icons.AirplanemodeInactive /><span>AirplanemodeInactive</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><Icons.Games /><span>Games</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><Icons.GitHub /><span>GitHub</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><Icons.Money /><span>Money</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><Icons.Nfc /><span>Nfc</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><Icons.Facebook /><span>Facebook</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><Icons.Telegram /><span>Telegram</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><Icons.Toys /><span>Toys</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><Icons.Deck /><span>Deck</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><Icons.Dashboard /><span>Dashboard</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><Icons.Wifi /><span>Wifi</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><Icons.Airplay /><span>Airplay</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><Icons.AirportShuttle /><span>AirportShuttle</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><Icons.Alarm /><span>Alarm</span></Col>
@@ -200,18 +197,20 @@ class IconsPage extends React.Component {
                 <Col xs={12} sm={4} md={3} lg={2}><Icons.Android /><span>Android</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><Icons.Apps /><span>Apps</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><Icons.Archive /><span>Archive</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><Icons.ArrowBack /><span>ArrowBack</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><Icons.ArrowBackIos /><span>ArrowBackIos</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><Icons.ArrowDownward /><span>ArrowDownward</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><Icons.ArrowDropDown /><span>ArrowDropDown</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><Icons.ArrowDropDownCircle /><span>ArrowDropDownCircle</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><Icons.ArrowDropUp /><span>ArrowDropUp</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><Icons.ArrowForward /><span >ArrowForward</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><Icons.ArrowForwardIos /><span>ArrowForwardIos</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><Icons.ArrowLeft /><span>ArrowLeft</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><Icons.ArrowRight /><span>ArrowRight</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><Icons.ArrowRightAlt /><span>ArrowRightAlt</span></Col>
-                <Col xs={12} sm={4} md={3} lg={2}><Icons.ArrowUpward /><span>ArrowUpward</span></Col>
+
+                <Col xs={12} sm={4} md={3} lg={2}><Icons.Code /><span>Code</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><Icons.Cake /><span>Cake</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><Icons.Dns /><span>Dns</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><Icons.Flag /><span>Flag</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><Icons.Grain /><span>Grain</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><Icons.Http /><span>Http</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><Icons.Link /><span >Link</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><Icons.Opacity /><span>Opacity</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><Icons.Person /><span>Person</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><Icons.Palette /><span>Palette</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><Icons.Panorama /><span>Panorama</span></Col>
+                <Col xs={12} sm={4} md={3} lg={2}><Icons.Router /><span>Router</span></Col>
+
                 <Col xs={12} sm={4} md={3} lg={2}><Icons.ArtTrack /><span>ArtTrack</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><Icons.AspectRatio /><span>AspectRatio</span></Col>
                 <Col xs={12} sm={4} md={3} lg={2}><Icons.Assessment /><span>Assessment</span></Col>

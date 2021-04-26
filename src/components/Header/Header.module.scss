@@ -85,3 +85,7 @@
   border-radius: 50%;
 }
 
+.form-control::placeholder {
+  color: red;
+  opacity: 1;
+}

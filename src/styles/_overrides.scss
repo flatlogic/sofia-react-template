@@ -15,6 +15,9 @@
     .form-control {
       font-size: $font-size-sm;
       font-weight: $font-weight-normal;
+      &::placeholder {
+        color: $base-middle-gray;
+      }
     }
   }
 }

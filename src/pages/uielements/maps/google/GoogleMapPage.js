@@ -10,10 +10,7 @@ const containerStyle = {
   height: "100%",
 };
 
-const center = {
-  lat: -37.813179,
-  lng: 144.950259,
-};
+const center = { lat: 53.8847608, lng: 27.4532862 }
 
 function GoogleMapPage() {
   const { isLoaded } = useJsApiLoader({
@@ -22,12 +19,6 @@ function GoogleMapPage() {
   })
 
   const [, setMap] = React.useState(null)
-
-  const onLoad = React.useCallback(function callback(map) {
-    const bounds = new window.google.maps.LatLngBounds();
-    map.fitBounds(bounds);
-    setMap(map)
-  }, [])
 
   const onUnmount = React.useCallback(function callback(map) {
     setMap(null)
@@ -39,10 +30,9 @@ function GoogleMapPage() {
         mapContainerStyle={containerStyle}
         center={center}
         zoom={5}
-        onLoad={onLoad}
         onUnmount={onUnmount}
       >
-        <Marker position={{ lat: -17.813179, lng: 44.950259 }}/>
+        <Marker position={{ lat: 40.6976701, lng: -74.2598654 }}/>
       </GoogleMap>
     </div>
   ) : <></>
