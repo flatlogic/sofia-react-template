@@ -106,7 +106,7 @@ const Tables = function () {
                   </div>
                 </div>
                 <div className="widget-table-overflow">
-                  <Table className="table-striped table-borderless" responsive>
+                  <Table className="table-striped table-borderless table-hover" responsive>
                     <thead>
                     <tr>
                       <th>
@@ -202,7 +202,7 @@ const Tables = function () {
                   </Dropdown>
                 </div>
                 <div className="widget-table-overflow">
-                  <Table className="table-striped table-borderless" responsive>
+                  <Table className="table-striped table-borderless table-hover" responsive>
                     <thead>
                     <tr>
                       <th>
