@@ -106,21 +106,23 @@ const Tables = function () {
                   </div>
                 </div>
                 <div className="widget-table-overflow">
-                  <Table className="table-striped table-borderless table-hover" responsive>
+                  <Table className={`table-striped table-borderless table-hover ${s.statesTable}`} responsive>
                     <thead>
                     <tr>
-                      <th>
-                        <div>
-                          <Input
-                            id="checkbox1" type="checkbox"
+                      <th className={s.checkboxCol}>
+                        <div className="checkbox checkbox-primary">
+                          <input
+                            className="styled"
+                            id="checkbox100"
+                            type="checkbox"
                           />
-                          <Label for="checkbox1"/>
+                          <label for="checkbox100"/>
                         </div>
                       </th>
-                      <th>NAME</th>
-                      <th>COMPANY</th>
-                      <th>CITY</th>
-                      <th>STATE</th>
+                      <th className="w-25">NAME</th>
+                      <th className="w-25">COMPANY</th>
+                      <th className="w-25">CITY</th>
+                      <th className="w-25">STATE</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -132,9 +134,11 @@ const Tables = function () {
                       .map(item => (
                         <tr key={uuidv4()}>
                           <td>
-                            <div>
-                              <Input
-                                id={item.id} type="checkbox"
+                            <div className="checkbox checkbox-primary">
+                              <input
+                                id={item.id}
+                                className="styled"
+                                type="checkbox"
                               />
                               <Label for={item.id} />
                             </div>
@@ -206,14 +210,16 @@ const Tables = function () {
                     <thead>
                     <tr>
                       <th>
-                        <div>
-                          <Input
-                            id="checkbox2" type="checkbox"
+                        <div className="checkbox checkbox-primary">
+                          <input
+                            id="checkbox200"
+                            className="styled"
+                            type="checkbox"
                           />
-                          <Label for="checkbox2"/>
+                          <label for="checkbox200"/>
                         </div>
                       </th>
-                      <th>NAME</th>
+                      <th className={s.nameCol}>NAME</th>
                       <th>EMAIL</th>
                       <th>PRODUCT</th>
                       <th>PRICE</th>
@@ -231,11 +237,13 @@ const Tables = function () {
                       .map(item => (
                       <tr key={uuidv4()}>
                         <td>
-                          <div>
-                            <Input
-                              id={item.id} type="checkbox"
+                          <div className="checkbox checkbox-primary">
+                            <input
+                              id={item.id}
+                              className="styled"
+                              type="checkbox"
                             />
-                            <Label for={item.id} />
+                            <label for={item.id} />
                           </div>
                         </td>
                         <td>{item.name}</td>

@@ -146,22 +146,18 @@ const Notifications = function () {
           <Widget className="widget-p-md">
             <div className="headline-2 mb-4">Notification Types Examples</div>
             <Notification
-              key={uuidv4()}
               type="info"
               withIcon
             />
             <Notification
-              key={uuidv4()}
               type="error"
               withIcon
             />
             <Notification
-              key={uuidv4()}
               type="success"
               withIcon
             />
             <Notification
-              key={uuidv4()}
               type="warning"
               withIcon
             />
@@ -171,19 +167,15 @@ const Notifications = function () {
           <Widget className="widget-p-md">
             <div className="headline-2 mb-4">Notifications Types Examples, without icons</div>
             <Notification
-              key={uuidv4()}
               type="info"
             />
             <Notification
-              key={uuidv4()}
               type="error"
             />
             <Notification
-              key={uuidv4()}
               type="success"
             />
             <Notification
-              key={uuidv4()}
               type="warning"
             />
           </Widget>

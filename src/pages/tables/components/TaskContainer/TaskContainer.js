@@ -12,11 +12,11 @@ const TaskContainer = (props) => {
         >
           <div className={s.taskDescription}>
             <div
-              className="form-check mr-1">
+              className="checkbox checkbox-primary mr-1">
               <input
                 onChange={() => props.toggleTask(task.id)}
                 checked={task.completed}
-                className="form-check-input"
+                className="styled"
                 id={`checkbox${task.id}`}
                 type="checkbox"
               />

@@ -10,8 +10,6 @@
   }
 }
 
-
-
 .transactionTitleBlock {
   display: flex;
   align-items: center;
@@ -38,23 +36,12 @@
     height: 32px;
 }
 
-.bootstrapTable {
-  border: none;
+.checkboxCol {
+  width: 5%;
+}
 
-  :global .table {
-    thead,
-    tbody {
-      th,
-      td {
-        border-right: none;
-        border-left: none;
-      }
-    }
-
-    thead th {
-      background: transparent;
-    }
-  }
+.nameCol {
+  width: 15%;
 }
 
 

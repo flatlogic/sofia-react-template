@@ -238,7 +238,6 @@ class Dashboard extends React.Component {
                 </div>
               </div>
               <div className={s.userParams}>
-                {/* REFACTOR THIS BY MAPPING DATA !!!!!!!!!*/}
                 <div className="d-flex flex-column">
                   <p className="headline-3">63 kg</p>
                   <p className="body-3 muted">Weight</p>
@@ -291,7 +290,6 @@ class Dashboard extends React.Component {
                   <Progress color="secondary-cyan" className="progress-xs" value={40} />
                 </div>
               </div>
-              {/* REFACTOR THIS BY MAPPING DATA !!!!!!!!!*/}
               <p className="headline-3">Appointments</p>
               <div className={`mt-3 ${s.widgetBlock}`}>
                 <div className={s.widgetBody}>
@@ -302,16 +300,17 @@ class Dashboard extends React.Component {
                       <p className="body-3 muted">Yoga, Airplace Gym</p>
                     </div>
                   </div>
-                  <div className="">
-                    <Input
+                  <div className="checkbox checkbox-primary">
+                    <input
                       id="checkbox0"
                       type="checkbox"
+                      className="styled"
                       checked={this.state.checkboxes[0]}
                       onChange={(event) =>
                         this.changeCheck(event, "checkboxes", 0)
                       }
                     />
-                    <Label for="checkbox0" />
+                    <label for="checkbox0" />
                   </div>
                 </div>
               </div>
@@ -324,16 +323,17 @@ class Dashboard extends React.Component {
                       <p className="body-3 muted">Therapy</p>
                     </div>
                   </div>
-                  <div className="">
-                    <Input
+                  <div className="checkbox checkbox-primary">
+                    <input
                       id="checkbox1"
                       type="checkbox"
+                      className="styled"
                       checked={this.state.checkboxes[1]}
                       onChange={(event) =>
                         this.changeCheck(event, "checkboxes", 1)
                       }
                     />
-                    <Label for="checkbox1" />
+                    <label for="checkbox1" />
                   </div>
                 </div>
               </div>

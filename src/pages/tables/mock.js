@@ -131,6 +131,14 @@ const mock = {
       city: "Kalamazoo, MI",
       state: "Michigan",
     },
+    {
+      id: "checkbox144",
+      img: floydMilesImg,
+      name: "Floyd Miles",
+      company: "Example LLC.",
+      city: "Idaho city, ID",
+      state: "North Dakota",
+    },
   ],
   secondTable: [
     {
@@ -140,7 +148,7 @@ const mock = {
       product: "series",
       price: "$5.22",
       date: "5/27/21",
-      city: "Pembroke Pines",
+      city: "Pembroke",
       color: "secondary-cyan",
       status: "Sent",
     },
@@ -177,7 +185,6 @@ const mock = {
       color: "secondary-red",
       status: "Declined",
     },
-    //////////
     {
       id: "checkbox221",
       name: "Floyd Miles",
@@ -279,6 +286,17 @@ const mock = {
     },
     {
       id: "checkbox242",
+      name: "Ellie Smith",
+      email: "ellie.smith@example.com",
+      product: "chair pad",
+      price: "$53.99",
+      date: "3/19/21",
+      city: "Austin",
+      color: "secondary-cyan",
+      status: "Sent",
+    },
+    {
+      id: "checkbox243",
       name: "Floyd Miles",
       email: "floyd.miles@example.com",
       product: "towels",
@@ -288,7 +306,17 @@ const mock = {
       color: "secondary-yellow",
       status: "Pending",
     },
-
+    {
+      id: "checkbox244",
+      name: "Ellie Smith",
+      email: "ellie.smith@example.com",
+      product: "chair pad",
+      price: "$53.99",
+      date: "3/19/21",
+      city: "Austin",
+      color: "secondary-cyan",
+      status: "Sent",
+    },
   ],
   transactionsWidget: [
     {

@@ -267,12 +267,12 @@ h6,
 
   th:first-child,
   td:first-child {
-    padding-left: 48px;
+    padding-left: 8px;
   }
 
   th:last-child,
   td:last-child {
-    padding-right: 48px;
+    padding-right: 24px;
   }
 
   .form-check-input {
@@ -293,6 +293,7 @@ table > thead > tr > th {
 .table-striped {
   thead {
     th {
+      vertical-align: middle;
       border: none;
     }
   }
@@ -415,6 +416,76 @@ table > thead > tr > th {
   font-weight: $font-weight-semi-bold;
   color: $white;
   border-radius: 4px;
+}
+
+///////// Checkboxes //////////
+.checkbox {
+  padding-left: 20px;
+  display: flex;
+  margin-bottom: 4px;
+}
+.checkbox label {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  padding-left: 5px;
+}
+.checkbox label::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 0;
+  margin-left: -20px;
+  border: 1px solid $base-middle-gray;
+  border-radius: 3px;
+  background-color: #fff;
+  -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+.checkbox label::after {
+  display: inline-block;
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  left: 0;
+  top: 0;
+  margin-left: -20px;
+  padding-left: 3px;
+  padding-top: 1px;
+  font-size: 11px;
+  color: #555555;
+}
+
+.checkbox input[type='checkbox']{
+  opacity: 0;
+  z-index: 1;
+}
+
+.checkbox input[type='checkbox']:disabled + label::before {
+  background-color: #eeeeee;
+  cursor: not-allowed;
+}
+
+.checkbox-primary input[type='checkbox']:checked + label::before {
+  background-color: $violet;
+  border-color: $violet;
+}
+.checkbox-primary input[type='checkbox']:checked + label::after {
+  color: #fff;
+}
+
+input[type='checkbox'].styled:checked + label:after {
+  top: 2px;
+  content: url("../components/Icons/checkmark.svg");
+}
+input[type='checkbox'] .styled:checked + label::before {
+  color: #fff;
+}
+input[type='checkbox'] .styled:checked + label::after {
+  color: #fff;
 }
 
 ///////// Tabs //////////
