@@ -126,7 +126,7 @@ class Header extends React.Component {
                   <div className={s.count}></div>
               </div>
             </DropdownToggle>
-            <DropdownMenu right className="navbar-dropdown" style={{ width: "340px" }}>
+            <DropdownMenu right className="navbar-dropdown notifications-dropdown" style={{ width: "340px" }}>
               <DropdownItem><img src={basketIcon} alt="Basket Icon"/><span>12 new orders have arrived today</span></DropdownItem>
               <DropdownItem>
                 <div>
@@ -152,7 +152,7 @@ class Header extends React.Component {
               </span>
               <span className="small d-none d-sm-block ml-1 mr-2 body-1">Christina Carey</span>
             </DropdownToggle>
-            <DropdownMenu className="navbar-dropdown" style={{ width: "194px" }}>
+            <DropdownMenu className="navbar-dropdown profile-dropdown" style={{ width: "194px" }}>
               <DropdownItem><img src={profileIcon} alt="Profile Icon"/><span>Profile</span></DropdownItem>
               <DropdownItem><img src={tasksIcon} alt="Tasks Icon"/><span>Tasks</span></DropdownItem>
               <DropdownItem><img src={messagesIcon} alt="Message Icon"/><span>Messages</span></DropdownItem>
