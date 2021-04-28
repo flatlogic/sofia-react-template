@@ -25,9 +25,11 @@ import MenuIcon from "../Icons/HeaderIcons/MenuIcon.js";
 import SearchBarIcon from "../Icons/HeaderIcons/SearchBarIcon.js";
 import BellIcon from "../Icons/HeaderIcons/BellIcon.js";
 import SearchIcon from "../Icons/HeaderIcons/SearchIcon.js";
-import profileIcon from "../../assets/navbarMenus/profileOutlined.svg";
-import messagesIcon from "../../assets/navbarMenus/messagesOutlined.svg";
-import tasksIcon from "../../assets/navbarMenus/tasksOutlined.svg";
+
+import ProfileIcon from "../../assets/navbarMenus/pfofileIcons/ProfileIcon.js";
+import MessagesIcon from "../../assets/navbarMenus/pfofileIcons/MessagesIcon.js";
+import TasksIcon from "../../assets/navbarMenus/pfofileIcons/TasksIcon.js";
+
 import logoutIcon from "../../assets/navbarMenus/logoutOutlined.svg";
 import basketIcon from "../../assets/navbarMenus/basketIcon.svg";
 import calendarIcon from "../../assets/navbarMenus/calendarIcon.svg";
@@ -153,12 +155,12 @@ class Header extends React.Component {
               <span className="small d-none d-sm-block ml-1 mr-2 body-1">Christina Carey</span>
             </DropdownToggle>
             <DropdownMenu className="navbar-dropdown profile-dropdown" style={{ width: "194px" }}>
-              <DropdownItem><img src={profileIcon} alt="Profile Icon"/><span>Profile</span></DropdownItem>
-              <DropdownItem><img src={tasksIcon} alt="Tasks Icon"/><span>Tasks</span></DropdownItem>
-              <DropdownItem><img src={messagesIcon} alt="Message Icon"/><span>Messages</span></DropdownItem>
+              <DropdownItem className={s.dropdownProfileItem}><ProfileIcon/><span>Profile</span></DropdownItem>
+              <DropdownItem className={s.dropdownProfileItem}><TasksIcon/><span>Tasks</span></DropdownItem>
+              <DropdownItem className={s.dropdownProfileItem}><MessagesIcon/><span>Messages</span></DropdownItem>
               <NavItem>
                 <NavLink onClick={this.doLogout} href="#">
-                  <button className="btn btn-primary rounded-pill mx-auto logout-btn" type="submit"><img src={logoutIcon} alt="Logout Icon"/><span className="ml-1">Logout</span></button>
+                  <button className="btn btn-primary rounded-pill mx-auto logout-btn" type="submit"><img src={logoutIcon} alt="Logout"/><span className="ml-1">Logout</span></button>
                 </NavLink>
               </NavItem>
             </DropdownMenu>

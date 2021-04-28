@@ -87,7 +87,6 @@ class LinksGroup extends React.Component {
           <NavLink
             to={this.props.link}
             activeClassName={s.headerLinkActive}
-            // style={{ paddingLeft: `${40 + (10 * (this.props.deep - 1))}px` }}
             onClick={(e) => {
               if (this.props.link.includes('menu')) {
                 e.preventDefault();

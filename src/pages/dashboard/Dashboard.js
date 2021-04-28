@@ -5,8 +5,6 @@ import {
   Row,
   Progress,
   Button,
-  Input,
-  Label,
   ButtonDropdown,
   DropdownToggle,
   DropdownMenu,
@@ -310,7 +308,7 @@ class Dashboard extends React.Component {
                         this.changeCheck(event, "checkboxes", 0)
                       }
                     />
-                    <label for="checkbox0" />
+                    <label htmlFor="checkbox0" />
                   </div>
                 </div>
               </div>
@@ -333,7 +331,7 @@ class Dashboard extends React.Component {
                         this.changeCheck(event, "checkboxes", 1)
                       }
                     />
-                    <label for="checkbox1" />
+                    <label htmlFor="checkbox1" />
                   </div>
                 </div>
               </div>

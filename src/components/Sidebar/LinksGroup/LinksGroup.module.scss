@@ -61,18 +61,10 @@ a.headerLinkActive {
     color: $white;
   }
 
-  //.sidebarIcon {
-  //  path {
-  //    fill: blue;
-  //    stroke: red;
-  //  }
-  //}
-  // ПОЧЕМУ НЕ ПОДХВАТЫВАЕТСЯ ЦВЕТ????????
-
   svg {
     path {
       fill: $white;
-      stroke: white;
+      stroke: $white;
     }
   }
 }

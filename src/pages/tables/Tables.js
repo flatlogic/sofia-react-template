@@ -12,7 +12,6 @@ import {
   DropdownMenu,
   DropdownToggle,
   DropdownItem,
-  Input,
   Label,
   Badge,
 } from "reactstrap";
@@ -98,11 +97,11 @@ const Tables = function () {
                 <div className={s.tableTitle}>
                   <div className="headline-2">States Colors</div>
                   <div className="d-flex">
-                    <a href="#top"><img src={searchIcon} alt="Search"/></a>
-                    <a href="#top"><img className="d-none d-sm-block" src={cloudIcon} alt="Cloud" /></a>
-                    <a href="#top"><img src={printerIcon} alt="Printer" /></a>
-                    <a href="#top"><img className="d-none d-sm-block" src={optionsIcon} alt="Options" /></a>
-                    <a href="#top"><img src={funnelIcon} alt="Funnel" /></a>
+                    <a href="/#"><img src={searchIcon} alt="Search"/></a>
+                    <a href="/#"><img className="d-none d-sm-block" src={cloudIcon} alt="Cloud" /></a>
+                    <a href="/#"><img src={printerIcon} alt="Printer" /></a>
+                    <a href="/#"><img className="d-none d-sm-block" src={optionsIcon} alt="Options" /></a>
+                    <a href="/#"><img src={funnelIcon} alt="Funnel" /></a>
                   </div>
                 </div>
                 <div className="widget-table-overflow">

@@ -89,3 +89,16 @@
   color: red;
   opacity: 1;
 }
+
+.dropdownProfileItem {
+  display: flex;
+  &:hover {
+    svg {
+      path {
+        fill: $default;
+        stroke: $default;
+      }
+    }
+  }
+}
+

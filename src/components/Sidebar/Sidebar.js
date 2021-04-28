@@ -92,7 +92,7 @@ class Sidebar extends React.Component {
             index="typography"
           />
           <LinksGroup
-            onActiveSidebarItemChange={t => this.props.dispatch(changeActiveSidebarItem(t))}
+            onActiveSidebarItemChange={activeItem => this.props.dispatch(changeActiveSidebarItem(activeItem))}
             activeItem={this.props.activeItem}
             header="Tables"
             isHeader
