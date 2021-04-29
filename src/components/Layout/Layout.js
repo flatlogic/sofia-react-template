@@ -37,14 +37,15 @@ class Layout extends React.Component {
           <main className={s.content}>
             <Breadcrumbs url={this.props.location.pathname} />
             <Switch>
-              <Route path="/app" exact render={() => <Redirect to="app/dashboard"/>} />
-              <Route path="/app/dashboard" exact component={Dashboard}/>
-              <Route path="/app/typography" exact component={Typography} />
-              <Route path="/app/tables" exact component={Tables} />
-              <Route path="/app/notifications" exact component={Notifications} />
-              <Route path="/app/ui-elements/charts" exact component={Charts} />
-              <Route path="/app/ui-elements/icons" exact component={Icons} />
-              <Route path="/app/ui-elements/maps" exact component={Maps} />
+              <Route path="/template" exact render={() => <Redirect to="template/dashboard"/>} />
+              <Route path="/template/dashboard" exact component={Dashboard}/>
+              <Route path="/template/typography" exact component={Typography} />
+              <Route path="/template/tables" exact component={Tables} />
+              <Route path="/template/notifications" exact component={Notifications} />
+              <Route path="/template/ui-elements" exact render={() => <Redirect to={"/template/ui-elements/charts"} />} />
+              <Route path="/template/ui-elements/charts" exact component={Charts} />
+              <Route path="/template/ui-elements/icons" exact component={Icons} />
+              <Route path="/template/ui-elements/maps" exact component={Maps} />
               <Route path='*' exact render={() => <Redirect to="/error" />} />
             </Switch>
           </main>

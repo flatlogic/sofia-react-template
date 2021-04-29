@@ -30,7 +30,7 @@ import ProfileIcon from "../../assets/navbarMenus/pfofileIcons/ProfileIcon.js";
 import MessagesIcon from "../../assets/navbarMenus/pfofileIcons/MessagesIcon.js";
 import TasksIcon from "../../assets/navbarMenus/pfofileIcons/TasksIcon.js";
 
-import logoutIcon from "../../assets/navbarMenus/logoutOutlined.svg";
+import logoutIcon from "../../assets/navbarMenus/pfofileIcons/logoutOutlined.svg";
 import basketIcon from "../../assets/navbarMenus/basketIcon.svg";
 import calendarIcon from "../../assets/navbarMenus/calendarIcon.svg";
 import envelopeIcon from "../../assets/navbarMenus/envelopeIcon.svg";

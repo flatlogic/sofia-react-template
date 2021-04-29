@@ -77,7 +77,7 @@ class Sidebar extends React.Component {
             header="Dashboard"
             isHeader
             iconName={<HomeIcon className={s.sidebarIcon}/>}
-            link="/app/dashboard"
+            link="/template/dashboard"
             index="dashboard"
             badge="9"
           />
@@ -88,7 +88,7 @@ class Sidebar extends React.Component {
             header="Typography"
             isHeader
             iconName={<TypographyIcon />}
-            link="/app/typography"
+            link="/template/typography"
             index="typography"
           />
           <LinksGroup
@@ -97,7 +97,7 @@ class Sidebar extends React.Component {
             header="Tables"
             isHeader
             iconName={<TablesIcon className={s.menuIcon} />}
-            link="/app/tables"
+            link="/template/tables"
             index="tables"
           />
           <LinksGroup
@@ -106,7 +106,7 @@ class Sidebar extends React.Component {
             header="Notifications"
             isHeader
             iconName={<NotificationsIcon className={s.menuIcon}/>}
-            link="/app/notifications"
+            link="/template/notifications"
             index="notifications"
           />
           <LinksGroup
@@ -115,17 +115,17 @@ class Sidebar extends React.Component {
             header="UI Elements"
             isHeader
             iconName={<UIElementsIcon className={s.menuIcon}/>}
-            link="/app/uielements"
+            link="/template/uielements"
             index="uielements"
             childrenLinks={[
               {
-                header: 'Icons', link: '/app/ui-elements/icons',
+                header: 'Charts', link: '/template/ui-elements/charts',
               },
               {
-                header: 'Charts', link: '/app/ui-elements/charts',
+                header: 'Icons', link: '/template/ui-elements/icons',
               },
               {
-                header: 'Google Maps', link: '/app/ui-elements/maps',
+                header: 'Google Maps', link: '/template/ui-elements/maps',
               },
             ]}
           />

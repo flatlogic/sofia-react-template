@@ -12,7 +12,9 @@ class Breadcrumbs extends React.Component {
       .slice(1)
       .map(route => route
         .split('-')
-        .map(word => word[0].toUpperCase() + word.slice(1))
+        .map(word => word.length < 3
+          ? word.toUpperCase()
+          : word[0].toUpperCase() + word.slice(1))
         .join(' ')
       );
     const length = route.length
@@ -25,8 +27,8 @@ class Breadcrumbs extends React.Component {
           {length === index + 1
             ? item
             : <Link to={middlewareUrl}>
-              {item}
-            </Link>
+                {item}
+              </Link>
           }
         </BreadcrumbItem>
       )
