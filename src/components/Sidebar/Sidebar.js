@@ -7,11 +7,6 @@ import s from "./Sidebar.module.scss";
 import LinksGroup from "./LinksGroup/LinksGroup.js";
 import { changeActiveSidebarItem } from "../../actions/navigation.js";
 import { logoutUser } from "../../actions/auth.js";
-import HomeIcon from "../Icons/SidebarIcons/HomeIcon.js";
-import NotificationsIcon from "../Icons/SidebarIcons/NotificationsIcon.js";
-import TablesIcon from "../Icons/SidebarIcons/TablesIcon.js";
-import TypographyIcon from "../Icons/SidebarIcons/TypographyIcon.js";
-import UIElementsIcon from "../Icons/SidebarIcons/UIElementsIcon.js";
 import SofiaLogo from "../Icons/SidebarIcons/SofiaLogo.js";
 
 class Sidebar extends React.Component {
@@ -76,18 +71,18 @@ class Sidebar extends React.Component {
             activeItem={this.props.activeItem}
             header="Dashboard"
             isHeader
-            iconName={<HomeIcon className={s.sidebarIcon}/>}
+            iconName={<i className={'eva eva-home-outline'}/>}
             link="/template/dashboard"
             index="dashboard"
             badge="9"
           />
-          <h5 className={[s.navTitle, s.groupTitle].join(" ")}>TEMPLATE</h5>
+          <h5 className={s.navTitle}>TEMPLATE</h5>
           <LinksGroup
             onActiveSidebarItemChange={activeItem => this.props.dispatch(changeActiveSidebarItem(activeItem))}
             activeItem={this.props.activeItem}
             header="Typography"
             isHeader
-            iconName={<TypographyIcon />}
+            iconName={<i className={'eva eva-text-outline'}/>}
             link="/template/typography"
             index="typography"
           />
@@ -96,7 +91,7 @@ class Sidebar extends React.Component {
             activeItem={this.props.activeItem}
             header="Tables"
             isHeader
-            iconName={<TablesIcon className={s.menuIcon} />}
+            iconName={<i className={'eva eva-grid-outline'}/>}
             link="/template/tables"
             index="tables"
           />
@@ -105,7 +100,7 @@ class Sidebar extends React.Component {
             activeItem={this.props.activeItem}
             header="Notifications"
             isHeader
-            iconName={<NotificationsIcon className={s.menuIcon}/>}
+            iconName={<i className={'eva eva-bell-outline'}/>}
             link="/template/notifications"
             index="notifications"
           />
@@ -114,7 +109,7 @@ class Sidebar extends React.Component {
             activeItem={this.props.activeItem}
             header="UI Elements"
             isHeader
-            iconName={<UIElementsIcon className={s.menuIcon}/>}
+            iconName={<i className={'eva eva-cube-outline'}/>}
             link="/template/uielements"
             index="uielements"
             childrenLinks={[
