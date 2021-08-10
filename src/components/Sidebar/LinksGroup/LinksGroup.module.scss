@@ -57,6 +57,10 @@ a.headerLinkActive {
   font-size: 1rem;
   color: $white;
 
+  i {
+    color: white !important;
+  }
+
   &:hover {
     color: $white;
   }

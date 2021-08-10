@@ -41,7 +41,9 @@
 }
 
 .sidebarOpen {
-  height: auto !important;
+  @media (min-width: breakpoint-min(md)) {
+    height: auto !important;
+  }
 }
 
 .logo {

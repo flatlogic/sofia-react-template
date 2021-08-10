@@ -147,7 +147,7 @@ class Dashboard extends React.Component {
                       <p className="headline-1">Upgrade your plan</p>
                       <p className="body-3">So how did the classical Latin become so </p>
                       <div className="d-flex justify-content-between my-4">
-                        <Button size="sm" className="rounded-pill mr-1" color="primary">Go Premium</Button>
+                        <Button className="rounded-pill mr-3" color="primary">Go Premium</Button>
                         <Button className="rounded-pill body-3" outline color="dark">Try for free</Button>
                       </div>
                     </div>

@@ -38,17 +38,19 @@ class Sidebar extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
+
     if (this.props.sidebarOpened !== prevProps.sidebarOpened) {
       if (this.props.sidebarOpened) {
         this.element.style.height = `276px`;
       } else {
         this.element.classList.remove(s.sidebarOpen);
         setTimeout(() => {
-          this.element.style.height = '0px';
+          this.element.style.height = '';
         }, 0);
       }
     }
   }
+
 
   doLogout(id) {
     this.props.dispatch(logoutUser());
