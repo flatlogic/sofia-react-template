@@ -1,13 +1,20 @@
+// -- React Imports
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+// -- Redux Imports
 import { createStore, applyMiddleware } from "redux";
 import ReduxThunk from "redux-thunk";
 import { Provider } from 'react-redux';
-import * as serviceWorker from './serviceWorker';
-
-import App from './components/App';
 import reducers from './reducers';
 
+// -- App
+import App from './App';
+
+// -- Service Worker
+import * as serviceWorker from './serviceWorker';
+
+// -- Data Store
 const store = createStore(
   reducers,
   applyMiddleware(ReduxThunk)
