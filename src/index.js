@@ -1,6 +1,6 @@
 // -- React Imports
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 
 // -- Redux Imports
 import { createStore, applyMiddleware } from "redux";
@@ -20,7 +20,8 @@ const store = createStore(
   applyMiddleware(ReduxThunk)
 );
 
-ReactDOM.render(
+// -- Rendering Application
+render(
   <Provider store={store}>
     <App/>
   </Provider>,

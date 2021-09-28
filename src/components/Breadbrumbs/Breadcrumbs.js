@@ -4,11 +4,11 @@ import { v4 as uuidv4 } from "uuid";
 import { Link } from "react-router-dom";
 import s from "./Breadcrumbs.module.scss";
 
-class Breadcrumbs extends React.Component {
+const Breadcrumbs = (props) => {
 
-  renderBreadcrumbs = () => {
-    let url = this.props.url;
-    let route = this.props.url.split('/')
+  const renderBreadcrumbs = () => {
+    let url = props.url;
+    let route = props.url.split('/')
       .slice(1)
       .map(route => route
         .split('-')
@@ -27,31 +27,28 @@ class Breadcrumbs extends React.Component {
           {length === index + 1
             ? item
             : <Link to={middlewareUrl}>
-                {item}
-              </Link>
+              {item}
+            </Link>
           }
         </BreadcrumbItem>
       )
     })
   }
 
-  render() {
+  let routeArr = props.url.split('/');
+  let title = routeArr[routeArr.length - 1];
+  let breadcrumbTitle = title[0].toUpperCase() + title.slice(1)
 
-    let routeArr = this.props.url.split('/');
-    let title = routeArr[routeArr.length - 1];
-    let breadcrumbTitle = title[0].toUpperCase() + title.slice(1)
-
-    return (
-      <div className={s.breadcrumbs}>
-        <div className="headline-2">{breadcrumbTitle}</div>
-        {breadcrumbTitle !== "Dashboard" &&
-          <Breadcrumb tag="nav" listTag="div">
-            {this.renderBreadcrumbs()}
-          </Breadcrumb>
-        }
-      </div>
-    )
-  }
+  return (
+    <div className={s.breadcrumbs}>
+      <div className="headline-2">{breadcrumbTitle}</div>
+      {breadcrumbTitle !== "Dashboard" &&
+      <Breadcrumb tag="nav" listTag="div">
+        {renderBreadcrumbs()}
+      </Breadcrumb>
+      }
+    </div>
+  )
 };
 
 export default Breadcrumbs;
