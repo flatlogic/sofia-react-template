@@ -1,15 +1,25 @@
+// -- React and related libs
 import React from "react";
-import { connect } from "react-redux";
 import { Switch, Route, Redirect } from "react-router";
 import { HashRouter } from "react-router-dom";
-import LayoutComponent from "./components/Layout/Layout.js";
-import ErrorPage from "./pages/error/ErrorPage.js";
-import Login from "./pages/login/Login.js";
-import Register from "./pages/register/Register.js";
-import { logoutUser } from "./actions/auth.js";
 
-import "./styles/app.scss";
+// -- Redux
+import { connect } from "react-redux";
+
+// -- Custom Components
+import LayoutComponent from "./components/Layout/Layout";
+import ErrorPage from "./pages/error/ErrorPage";
+import Login from "./pages/login/Login";
+import Register from "./pages/register/Register";
+
+// -- Redux Actions
+import { logoutUser } from "./actions/auth";
+
+// -- Third Party Libs
 import { ToastContainer } from "react-toastify";
+
+// -- Component Styles
+import "./styles/app.scss";
 
 const PrivateRoute = ({ dispatch, component, ...rest }) => {
   if (!Login.isAuthenticated(JSON.parse(localStorage.getItem("authenticated")))) {

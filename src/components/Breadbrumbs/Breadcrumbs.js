@@ -1,7 +1,14 @@
+// -- React and related libs
 import React from "react";
-import { Breadcrumb, BreadcrumbItem } from "reactstrap";
-import { v4 as uuidv4 } from "uuid";
 import { Link } from "react-router-dom";
+
+// -- Reactstrap Imports
+import { Breadcrumb, BreadcrumbItem } from "reactstrap";
+
+// -- Third Party Libs
+import { v4 as uuidv4 } from "uuid";
+
+// -- Component Styles
 import s from "./Breadcrumbs.module.scss";
 
 const Breadcrumbs = (props) => {

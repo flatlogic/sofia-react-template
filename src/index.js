@@ -1,8 +1,8 @@
-// -- React Imports
+// -- React and related libs
 import React from 'react';
 import { render } from 'react-dom';
 
-// -- Redux Imports
+// -- Redux
 import { createStore, applyMiddleware } from "redux";
 import ReduxThunk from "redux-thunk";
 import { Provider } from 'react-redux';
