@@ -40,9 +40,15 @@
   }
 }
 
+//.sidebarOpen {
+//  @media (min-width: breakpoint-min(md)) {
+//    //height: auto !important;
+//  }
+//}
+
 .sidebarOpen {
-  @media (min-width: breakpoint-min(md)) {
-    height: auto !important;
+  @media (max-width: breakpoint-max(sm)) {
+    height: 276px;
   }
 }
 

@@ -43,9 +43,7 @@ export default function Notification({ ...props }) {
     <>
       <Alert
         className={s.notificationContainer}
-        style={{
-          backgroundColor: colors[props.type]
-        }}
+        style={{backgroundColor: colors[props.type]}}
         isOpen={notificationOpen}
         toggle={() => closeNotification()}
       >

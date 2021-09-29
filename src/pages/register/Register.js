@@ -16,7 +16,7 @@ import Footer from "../../components/Footer/Footer.js";
 import Login from "../login/Login.js";
 
 import loginImage from "../../assets/registerImage.svg";
-import SofiaLogo from "../../components/Icons/SidebarIcons/SofiaLogo.js";
+import SofiaLogo from "../../components/Icons/SofiaLogo.js";
 import GoogleIcon from "../../components/Icons/AuthIcons/GoogleIcon.js";
 import TwitterIcon from "../../components/Icons/AuthIcons/TwitterIcon.js";
 import FacebookIcon from "../../components/Icons/AuthIcons/FacebookIcon.js";

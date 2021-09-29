@@ -144,4 +144,29 @@ class LinksGroup extends React.Component {
   }
 }
 
+const NewLinksGroup = (props) => {
+  return (
+    <>
+
+    </>
+  )
+}
+
+NewLinksGroup.propTypes = {
+  header: PropTypes.node.isRequired,
+  link: PropTypes.string.isRequired,
+  childrenLinks: PropTypes.array,
+  iconName: PropTypes.object,
+  className: PropTypes.string,
+  badge: PropTypes.string,
+  label: PropTypes.string,
+  activeItem: PropTypes.string,
+  isHeader: PropTypes.bool,
+  index: PropTypes.string,
+  deep: PropTypes.number,
+  onActiveSidebarItemChange: PropTypes.func,
+  labelColor: PropTypes.string,
+  exact: PropTypes.bool,
+}
+
 export default withRouter(LinksGroup);

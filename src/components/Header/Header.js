@@ -23,7 +23,6 @@ import { logoutUser } from "../../actions/auth";
 import { closeSidebar, openSidebar } from "../../actions/navigation";
 import MenuIcon from "../Icons/HeaderIcons/MenuIcon";
 import SearchBarIcon from "../Icons/HeaderIcons/SearchBarIcon";
-import BellIcon from "../Icons/HeaderIcons/BellIcon";
 import SearchIcon from "../Icons/HeaderIcons/SearchIcon";
 
 import ProfileIcon from "../../assets/navbarMenus/pfofileIcons/ProfileIcon";
@@ -102,7 +101,7 @@ const Header = (props) => {
         <Dropdown nav isOpen={menuOpen} toggle={() => toggleMenu()} className="tutorial-dropdown mr-2 mr-sm-3">
           <DropdownToggle nav>
             <div className={s.navbarBlock}>
-              <BellIcon maskId={114}></BellIcon>
+              <i className={'eva eva-bell-outline'}/>
               <div className={s.count}></div>
             </div>
           </DropdownToggle>
@@ -127,9 +126,9 @@ const Header = (props) => {
         </Dropdown>
         <Dropdown isOpen={notificationsOpen} toggle={() => toggleNotifications()} nav id="basic-nav-dropdown" className="ml-3">
           <DropdownToggle nav caret className="navbar-dropdown-toggle">
-              <span className={`${s.avatar} rounded-circle float-left mr-2`}>
-                <img src={userImg} alt="User"/>
-              </span>
+            <span className={`${s.avatar} rounded-circle float-left mr-2`}>
+              <img src={userImg} alt="User"/>
+            </span>
             <span className="small d-none d-sm-block ml-1 mr-2 body-1">Christina Carey</span>
           </DropdownToggle>
           <DropdownMenu className="navbar-dropdown profile-dropdown" style={{ width: "194px" }}>
