@@ -21,7 +21,7 @@ const LinksGroup = (props) => {
     exact = true
   } = props;
 
-  const [headerLinkClicked, setHeaderLinkClicked] = useState(true);
+  const [headerLinkClicked, setHeaderLinkClicked] = useState(false);
 
   const togglePanelCollapse = (link, e) => {
     props.onActiveSidebarItemChange(link);
