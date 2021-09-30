@@ -1,6 +1,6 @@
 # 👇 Sofia React Template
 
-Free and open-source admin dashboard template built with React v17.0.1 and Bootstrap v4.6. Developed with ❤️ by [Flatlogic](https://flatlogic.com/). If you love our project please star ⭐️ our repo!
+Free and open-source admin dashboard template built with React v17.0.2 and Bootstrap v4.6. Developed with ❤️ by [Flatlogic](https://flatlogic.com/). If you love our project please star ⭐️ our repo!
 
 [View Demo](https://flatlogic.github.io/sofia-react-template/) | [Download](https://github.com/flatlogic/sofia-react-template.git) | [More templates](https://flatlogic.com/templates)
 
@@ -16,6 +16,7 @@ Lite version of a Sofia React includes following features and pages:
 * React v17
 * Bootstrap v4.6 & SCSS
 * React Router v5
+* React functional components and react hooks
 * React Hooks
 * Mobile friendly responsive layout
 * Recharts and Apexcharts chart libraries
