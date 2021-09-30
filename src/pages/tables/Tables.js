@@ -79,10 +79,10 @@ const Tables = function () {
   const toggleTask = (id) => {
     setTasks(
       tasks.map( task => {
-      if (task.id === id) {
-        task.completed = !task.completed;
-      }
-      return task;
+        if (task.id === id) {
+          task.completed = !task.completed;
+        }
+        return task;
       })
     )
   }

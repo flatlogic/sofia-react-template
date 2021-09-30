@@ -18,11 +18,14 @@ import { logoutUser } from "./actions/auth";
 // -- Third Party Libs
 import { ToastContainer } from "react-toastify";
 
+// -- Services
+import isAuthenticated from "./services/authService";
+
 // -- Component Styles
 import "./styles/app.scss";
 
 const PrivateRoute = ({ dispatch, component, ...rest }) => {
-  if (!Login.isAuthenticated(JSON.parse(localStorage.getItem("authenticated")))) {
+  if (!isAuthenticated(JSON.parse(localStorage.getItem("authenticated")))) {
     dispatch(logoutUser());
     return (<Redirect to="/login" />)
   } else {

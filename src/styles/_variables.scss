@@ -67,13 +67,12 @@ $theme-colors: (
   info:             $blue,
   warning:          $orange,
   danger:           $orange-dark,
-  primary-hover:    $violet-dark,  // дополнить значениями хуверов после того как Яна добавит их в библиотеку
+  primary-hover:    $violet-dark,
   dark:             $gray-700,
   default:          $default,
   dark-gray:        $base-dark-gray,
   middle-gray:      $base-middle-gray,
   light-gray:       $base-light-gray,
-        // experimental added white color to theme-colors
   white:            $white,
 );
 
