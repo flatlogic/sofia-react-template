@@ -16,7 +16,7 @@ Lite version of a Sofia React includes following features and pages:
 * React v17
 * Bootstrap v4.6 & SCSS
 * React Router v5
-* React functional components and react hooks
+* React functional components
 * React Hooks
 * Mobile friendly responsive layout
 * Recharts and Apexcharts chart libraries
