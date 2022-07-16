@@ -1,10 +1,6 @@
 {
   "name": "sofia-react-template",
   "version": "1.1.0",
-   "engines": {
-    "node": "16.13.0",
-    "yarn": "1.22.19"
-  },
   "homepage": "./",
   "private": true,
   "dependencies": {
