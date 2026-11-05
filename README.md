@@ -100,3 +100,8 @@ validate the canonical npm lock, production output and Chrome regression.
 `PLAYWRIGHT_DEV=1 npm test` checks the same routes on the dev server.
 The unused testing/table packages had no active source imports and are removed.
 The prior Yarn lock is superseded only after verifying a clean full npm graph.
+
+
+### Published demo
+
+`docs/` contains the verified production build with relative asset URLs. Refresh its generated assets from `build/` after `npm run build`, preserving deployment metadata. `PLAYWRIGHT_DOCS=1 npm test` serves that directory under `/sofia-react-template/` and checks its navigation and assets. `node --test tests/service-worker-cleanup.unit.mjs` verifies cache isolation. The retirement service worker removes cached responses only within its app scope and unregisters itself; other apps on the same origin keep their responses.
