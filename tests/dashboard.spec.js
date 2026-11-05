@@ -8,6 +8,7 @@ test('login, dashboard, tables, charts and logout work', async ({ page }) => {
   await page.getByRole('button', { name: 'Login', exact: true }).click();
   await expect(page).toHaveURL(/#\/template\/dashboard$/);
   await expect(page.locator('main .apexcharts-canvas svg').first()).toBeVisible();
+  await expect(page.locator('main .apexcharts-bar-area').first()).toBeVisible();
   await page.screenshot({ path: 'test-results/dashboard.png', fullPage: true });
   await page.locator('a[href="#/template/tables"]').click();
   await expect(page.locator('main table tbody tr').first()).toBeVisible();
@@ -15,7 +16,7 @@ test('login, dashboard, tables, charts and logout work', async ({ page }) => {
   await expect(page.locator('main')).toContainText('Typography');
   await page.goto('/#/template/ui-elements/charts');
   await expect(page.locator('main .apexcharts-canvas svg').first()).toBeVisible();
-  await expect(page.locator('main .recharts-pie').first()).toBeVisible();
+  await expect(page.locator('main .recharts-pie-sector path').first()).toBeVisible();
   await page.getByRole('link', { name: /Christina Carey/ }).click();
   await page.getByRole('button', { name: /Logout/ }).click();
   await expect(page.getByPlaceholder('Email', { exact: true })).toBeVisible();
