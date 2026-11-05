@@ -91,3 +91,12 @@ Looking for premium themes and templates? Check out more [admin dashboard templa
 
 ## License
 [MIT License](https://github.com/flatlogic/sofia-react-template/blob/master/LICENSE)
+
+## Maintained build and dependency checks
+
+Use Node >=22.12/npm. Vite replaces CRA4 while retaining React17, SCSS and all
+existing template pages. `npm ci`, `npm run build`, `npm test`, and `npm audit`
+validate the canonical npm lock, production output and Chrome regression.
+`PLAYWRIGHT_DEV=1 npm test` checks the same routes on the dev server.
+The unused testing/table packages had no active source imports and are removed.
+The prior Yarn lock is superseded only after verifying a clean full npm graph.
